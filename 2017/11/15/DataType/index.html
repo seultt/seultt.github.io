@@ -3,14 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category: Today I Learn | seultt</title>
+    <title>DataType | seultt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="seultt">
-<meta property="og:url" content="https://seultt.github.io/categories/Today-I-Learn/index.html">
+    <meta name="description" content="JavaScript Data Type기본 데이터 타입 한번 생성된 기본 타입은 read Only 로서 수정은 불가능하다. (immutable)  String Number undefined null Boolean Symbol    12var str = &apos;Hello&apos;;str = &apos;world&apos;; 첫번째 구문이 실행되면 메모리에 ‘Hello’ 생성, 식별자 str">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DataType">
+<meta property="og:url" content="https://seultt.github.io/2017/11/15/DataType/index.html">
 <meta property="og:site_name" content="seultt">
+<meta property="og:description" content="JavaScript Data Type기본 데이터 타입 한번 생성된 기본 타입은 read Only 로서 수정은 불가능하다. (immutable)  String Number undefined null Boolean Symbol    12var str = &apos;Hello&apos;;str = &apos;world&apos;; 첫번째 구문이 실행되면 메모리에 ‘Hello’ 생성, 식별자 str">
+<meta property="og:updated_time" content="2017-11-15T07:17:21.461Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="seultt">
+<meta name="twitter:title" content="DataType">
+<meta name="twitter:description" content="JavaScript Data Type기본 데이터 타입 한번 생성된 기본 타입은 read Only 로서 수정은 불가능하다. (immutable)  String Number undefined null Boolean Symbol    12var str = &apos;Hello&apos;;str = &apos;world&apos;; 첫번째 구문이 실행되면 메모리에 ‘Hello’ 생성, 식별자 str">
     
 
     
@@ -205,25 +210,21 @@
 </aside>
 
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-folder"></i></span>
-        <h1 class="title">Today I Learn</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-DataType" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/11/15/DataType/">DataType</a>
+        <h1 class="article-title" itemprop="name">
+            DataType
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2017/11/15/DataType/">
@@ -232,59 +233,163 @@
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
     </div>
 
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/11/15/React-JSX/">React-JSX</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="JavaScript-Data-Type"><a href="#JavaScript-Data-Type" class="headerlink" title="JavaScript Data Type"></a>JavaScript Data Type</h1><h2 id="기본-데이터-타입"><a href="#기본-데이터-타입" class="headerlink" title="기본 데이터 타입"></a>기본 데이터 타입</h2><ul>
+<li><p>한번 생성된 기본 타입은 read Only 로서 수정은 불가능하다. (immutable)</p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>undefined</li>
+<li>null</li>
+<li>Boolean</li>
+<li>Symbol</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello'</span>;</div><div class="line">str = <span class="string">'world'</span>;</div></pre></td></tr></table></figure>
+<p>첫번째 구문이 실행되면 메모리에 ‘Hello’ 생성, 식별자 str은 메모리에 생성된 문자열 ‘Hello’의 메모리 주소를 가리킨다.</p>
+<p>두번째 구문이 실행되면 이전에 생성된 문자열 ‘Hello’을 수정하는 것이 아닌 새로운 문자열 ‘world’를 메모리에 생성하고 식별자 str은 이것을 가리킨다.</p>
+<p>이때 문자열 ‘Hello’와  ‘world’는 모두 메모리에 존재하고 있다.</p>
+<h3 id="1-String"><a href="#1-String" class="headerlink" title="1.String"></a>1.String</h3><p>문자열은 배열처럼 인덱스를 통해 접근할 수 있다 이를 유사 배열이라 한다.</p>
+<p>문자열은 기본 자료형으로 수정은 불가능하지만 새로운 할당은 가능하다. 이는 기존 문자열을 수정하는 것이 아닌 새로운 문자열을 할당하는 것이기 때문이다.</p>
+<h3 id="2-Number"><a href="#2-Number" class="headerlink" title="2. Number"></a>2. Number</h3><h3 id="3-undefined"><a href="#3-undefined" class="headerlink" title="3. undefined"></a>3. undefined</h3><p>값을 할당하지 않은 변수는 undefined 값을 가진다. 즉, 선언은 되었지만 할당된 적이 없는 변수에 접근하거나 존재하지 않는 객체 프로퍼티에 접근할 경우 반환된다.</p>
+<h3 id="4-null"><a href="#4-null" class="headerlink" title="4. null"></a>4. null</h3><p>null 타입은 딱 한 가지 값, null을 가질 수 있다.<br>의도적으로 기본형(Primitives) 또는 Object형 변수에 값이 없다는 것을 명시한 것이다. 이는 변수와 메모리 어드레스의 참조 정보를 제거하는 것을 의미한다.</p>
+<h3 id="5-Boolean"><a href="#5-Boolean" class="headerlink" title="5. Boolean"></a>5. Boolean</h3><p>논리적인 요소를 나타내며 true와 false 두가지 값을 갔는다.</p>
+<p>false : null, undefined, 숫자 0</p>
+<h3 id="6-Symbol"><a href="#6-Symbol" class="headerlink" title="6. Symbol"></a>6. Symbol</h3><p>Symbol은 ES6에서 새롭게 추가된 7번째 타입이다. Symbol은 애플리케이션 전체에서 유일하며 변경 불가능한(immutable) 기본 자료형(primitive) 이다. 주로 객체의 프로퍼티 키(property key)로 사용한다. Symbol 값은 애플리케이션 전체에서 유일하기 때문에 Symbol 값을 키로 갖는 프로퍼티는 다른 어떠한 프로퍼티와도 충돌하지 않는다.</p>
+<h2 id="참조-데이터-타입"><a href="#참조-데이터-타입" class="headerlink" title="참조 데이터 타입"></a>참조 데이터 타입</h2><p>…조만간</p>
+<hr>
+<h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul>
+<li><a href="http://poiemaweb.com/js-data-type-variable" target="_blank" rel="external">poiemaweb - JS DataType &amp; Variable</a></li>
+</ul>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/11/15/React-JSX/">
-            <time datetime="2017-11-15T07:14:51.000Z" itemprop="datePublished">2017-11-15</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/React/">React</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
+
+    <a data-url="https://seultt.github.io/2017/11/15/DataType/" data-id="cja0ps9h900001gt588n4dzk3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://seultt.github.io/2017/11/15/DataType/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/15/DataType/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/11/15/React-JSX/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">React-JSX</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
 </section>
             
                 
@@ -466,11 +571,13 @@
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = '';
+            this.page.url = 'https://seultt.github.io/2017/11/15/DataType/';
+        
+        this.page.identifier = 'DataType';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'seultt' + '.disqus.com/count.js';
+        s.src = '//' + 'seultt' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

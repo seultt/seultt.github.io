@@ -153,11 +153,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                4
+                5
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                2
+                3
                 <span>tags</span>
             </div>
         </div>
@@ -206,6 +206,165 @@
 
             
             <section id="main">
+    <article id="post-DataType" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/11/15/DataType/">DataType</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/11/15/DataType/">
+            <time datetime="2017-11-15T07:17:11.000Z" itemprop="datePublished">2017-11-15</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="JavaScript-Data-Type"><a href="#JavaScript-Data-Type" class="headerlink" title="JavaScript Data Type"></a>JavaScript Data Type</h1><h2 id="기본-데이터-타입"><a href="#기본-데이터-타입" class="headerlink" title="기본 데이터 타입"></a>기본 데이터 타입</h2><ul>
+<li><p>한번 생성된 기본 타입은 read Only 로서 수정은 불가능하다. (immutable)</p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>undefined</li>
+<li>null</li>
+<li>Boolean</li>
+<li>Symbol</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello'</span>;</div><div class="line">str = <span class="string">'world'</span>;</div></pre></td></tr></table></figure>
+<p>첫번째 구문이 실행되면 메모리에 ‘Hello’ 생성, 식별자 str은 메모리에 생성된 문자열 ‘Hello’의 메모리 주소를 가리킨다.</p>
+<p>두번째 구문이 실행되면 이전에 생성된 문자열 ‘Hello’을 수정하는 것이 아닌 새로운 문자열 ‘world’를 메모리에 생성하고 식별자 str은 이것을 가리킨다.</p>
+<p>이때 문자열 ‘Hello’와  ‘world’는 모두 메모리에 존재하고 있다.</p>
+<h3 id="1-String"><a href="#1-String" class="headerlink" title="1.String"></a>1.String</h3><p>문자열은 배열처럼 인덱스를 통해 접근할 수 있다 이를 유사 배열이라 한다.</p>
+<p>문자열은 기본 자료형으로 수정은 불가능하지만 새로운 할당은 가능하다. 이는 기존 문자열을 수정하는 것이 아닌 새로운 문자열을 할당하는 것이기 때문이다.</p>
+<h3 id="2-Number"><a href="#2-Number" class="headerlink" title="2. Number"></a>2. Number</h3><h3 id="3-undefined"><a href="#3-undefined" class="headerlink" title="3. undefined"></a>3. undefined</h3><p>값을 할당하지 않은 변수는 undefined 값을 가진다. 즉, 선언은 되었지만 할당된 적이 없는 변수에 접근하거나 존재하지 않는 객체 프로퍼티에 접근할 경우 반환된다.</p>
+<h3 id="4-null"><a href="#4-null" class="headerlink" title="4. null"></a>4. null</h3><p>null 타입은 딱 한 가지 값, null을 가질 수 있다.<br>의도적으로 기본형(Primitives) 또는 Object형 변수에 값이 없다는 것을 명시한 것이다. 이는 변수와 메모리 어드레스의 참조 정보를 제거하는 것을 의미한다.</p>
+<h3 id="5-Boolean"><a href="#5-Boolean" class="headerlink" title="5. Boolean"></a>5. Boolean</h3><p>논리적인 요소를 나타내며 true와 false 두가지 값을 갔는다.</p>
+<p>false : null, undefined, 숫자 0</p>
+<h3 id="6-Symbol"><a href="#6-Symbol" class="headerlink" title="6. Symbol"></a>6. Symbol</h3><p>Symbol은 ES6에서 새롭게 추가된 7번째 타입이다. Symbol은 애플리케이션 전체에서 유일하며 변경 불가능한(immutable) 기본 자료형(primitive) 이다. 주로 객체의 프로퍼티 키(property key)로 사용한다. Symbol 값은 애플리케이션 전체에서 유일하기 때문에 Symbol 값을 키로 갖는 프로퍼티는 다른 어떠한 프로퍼티와도 충돌하지 않는다.</p>
+<h2 id="참조-데이터-타입"><a href="#참조-데이터-타입" class="headerlink" title="참조 데이터 타입"></a>참조 데이터 타입</h2><p>…조만간</p>
+<hr>
+<h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul>
+<li><a href="http://poiemaweb.com/js-data-type-variable" target="_blank" rel="external">poiemaweb - JS DataType &amp; Variable</a></li>
+</ul>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://seultt.github.io/2017/11/15/DataType/" data-id="cja0ps9h900001gt588n4dzk3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://seultt.github.io/2017/11/15/DataType/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/15/DataType/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-React-JSX" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -269,7 +428,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/15/React-JSX/" data-id="cja0pqw4800017ot576e9gghc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/15/React-JSX/" data-id="cja0ps9hj00041gt5hcdrzxvi" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -392,7 +551,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/08/React-Angular/" data-id="cja0pqw4400007ot5x37pyg01" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/08/React-Angular/" data-id="cja0ps9he00011gt5k0xevg9y" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -524,7 +683,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/06/yaho/" data-id="cja0pqw4f00057ot57y08hti9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/06/yaho/" data-id="cja0ps9im000c1gt5hzyw4ykr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -654,7 +813,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/06/hello-world/" data-id="cja0pqw4a00027ot5ghdvxn9q" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/06/hello-world/" data-id="cja0ps9hk00051gt5z49fj1qo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -745,6 +904,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2017/11/15/DataType/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a></p>
+                            <p class="item-title"><a href="/2017/11/15/DataType/" class="title">DataType</a></p>
+                            <p class="item-date"><time datetime="2017-11-15T07:17:11.000Z" itemprop="datePublished">2017-11-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2017/11/15/React-JSX/" class="thumbnail">
     
     
@@ -827,7 +1005,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Today-I-Learn/">Today I Learn</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/아무거나/">아무거나</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Today-I-Learn/">Today I Learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/아무거나/">아무거나</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -836,7 +1014,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">4</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -845,7 +1023,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undefined/">undefined</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undefined/">undefined</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -854,7 +1032,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a>
+            <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a>
         </div>
     </div>
 
