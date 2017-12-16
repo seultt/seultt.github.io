@@ -153,7 +153,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                6
+                8
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -206,6 +206,429 @@
 
             
             <section id="main">
+    <article id="post-React-cra" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/12/10/React-cra/">React-setting</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/12/10/React-cra/">
+            <time datetime="2017-12-10T07:03:13.000Z" itemprop="datePublished">2017-12-10</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/React/">React</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/React/">React</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="React"><a href="#React" class="headerlink" title="React"></a>React</h1><p>React는 Virtual Dom 을 사용한다.<br>변하기 전의 state 와 변한 후의 state 의 값을 비교하여 다시 랜더한다!</p>
+<h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><ul>
+<li>JavaScript XML - JSX  자체는 문법</li>
+<li>리액트에서는 JSX.Element 로 그려질 컴포넌트를 표현</li>
+<li>React.createElement 함수를 통해서도 JSX.Element를 만들수 있다.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloMessage</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;div&gt;Hello &#123;this.props.name&#125;&lt;/div&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM.render(&lt;HelloMessage name="Jane" /&gt;, mountNode);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloMessage</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="string">"div"</span>,</div><div class="line">      <span class="literal">null</span>,</div><div class="line">      <span class="string">"Hello"</span>,</div><div class="line">      <span class="keyword">this</span>.props.name</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM.render(React.createElement(HelloMessage,&#123; <span class="attr">name</span>: <span class="string">"Jane"</span> &#125;), mountNode);</div></pre></td></tr></table></figure>
+<h2 id="React-Component-render"><a href="#React-Component-render" class="headerlink" title="React.Component -render"></a>React.Component -render</h2><ul>
+<li>return JSX.Element =&gt; 리액트가 그려줌</li>
+<li>데이터(props, state)가 변하면, 다시 render 를 호출해서 그려준다.<ul>
+<li>render 가 호출되고, 재호출되는 지점을 파악해야 한다.</li>
+<li>render 를 JSX 로 표현해야한다.</li>
+<li>데이터와 JSX 가 합쳐져 하나의 컴포넌트를 이룬다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="React-포로젝트-설정"><a href="#React-포로젝트-설정" class="headerlink" title="React 포로젝트 설정"></a>React 포로젝트 설정</h1><h2 id="React-With-Babel-es6-jsx"><a href="#React-With-Babel-es6-jsx" class="headerlink" title="React With Babel [ es6, jsx ]"></a>React With Babel [ es6, jsx ]</h2><ul>
+<li>module bundler<ul>
+<li>webpack 2</li>
+<li>webpack-dev-sever</li>
+</ul>
+</li>
+<li>loader<ul>
+<li>babel-core</li>
+<li>babel-preset-env</li>
+<li>babel-plugin-transform-react-jsx</li>
+</ul>
+</li>
+<li>react<ul>
+<li>react</li>
+<li>react-dom</li>
+</ul>
+</li>
+</ul>
+<h2 id="React-With-TypeScript-ts-tsx"><a href="#React-With-TypeScript-ts-tsx" class="headerlink" title="React With TypeScript [ ts, tsx ]"></a>React With TypeScript [ ts, tsx ]</h2><ul>
+<li>module bundler<ul>
+<li>webpack 2</li>
+<li>webpack-dev-server</li>
+</ul>
+</li>
+<li>loader<ul>
+<li>ts-loader<ul>
+<li>typescript</li>
+</ul>
+</li>
+<li>tslint-loader<ul>
+<li>tslint</li>
+<li>tslint-react</li>
+</ul>
+</li>
+<li>source-map-loader</li>
+</ul>
+</li>
+<li>react<ul>
+<li>react, @types/react</li>
+<li>react-dom, @types/react-dom</li>
+</ul>
+</li>
+</ul>
+<h2 id="React-cra"><a href="#React-cra" class="headerlink" title="React - cra"></a>React - cra</h2><ul>
+<li><p>create-react-app 설치<br>npm i create-react-app -g</p>
+</li>
+<li><p>일반적인 cra<br>create-react-app projectName</p>
+</li>
+<li><p>타입스크립트 cra<br>create-react-app projectName –scripts-version=react-scripts-ts</p>
+</li>
+</ul>
+<h2 id="Component-만들기"><a href="#Component-만들기" class="headerlink" title="Component 만들기"></a>Component 만들기</h2><p>state 와 props 가 component의 데이터를 관장한다.<br>render를 다시 해주는 애들이 state와 props이다.<br>props는 react component 밖에서 주입해주는 데이터<br>state는 component 안에서 도는 데이터이다.</p>
+<ul>
+<li>stateless component : component 내에서 상태관리를 할 필요가 없을 때(function)</li>
+<li>class 로 만들어지는 component<ul>
+<li>일반적인 react.component 를 상속 받아서 만들어지는 component  </li>
+<li>pure component react.purecomponent 를 상속 받아서 만들어지는 component </li>
+</ul>
+</li>
+</ul>
+<h3 id="props-state"><a href="#props-state" class="headerlink" title="props, state"></a>props, state</h3><ul>
+<li><p>props(reade only!! chiledren?: ReacNode)</p>
+<ul>
+<li>component 외부에서 component 로 넣어주는 데이터 (함수도 가능)</li>
+<li>component 내부에서는 자신의 props 를 변경할 수 없다.</li>
+<li>component 외부에서 props 데이터를 변경하면, render가 다시 호출된다.</li>
+</ul>
+</li>
+<li><p>state(reade only!!)</p>
+<ul>
+<li>component 내부의 데이터</li>
+<li>클래스의 프로퍼티와는 다르다.<ul>
+<li>프로퍼티는 변경한다고 render 가 호출되지 않는다는 점</li>
+</ul>
+</li>
+<li>생성자 혹은 프로퍼티 초기 할당으로 state 를 초기 할당 해줘야 한다.</li>
+<li>내부에서 변경을 하더라도 setState 함수를 이용해야 render 가 호출된다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Stateless-Component-function"><a href="#Stateless-Component-function" class="headerlink" title="Stateless Component = function"></a>Stateless Component = function</h3><p>  render 함수가 없다.  바로 return 처리</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// App.js</span></div><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'./App.css'</span>;</div><div class="line"></div><div class="line">exprot interface AppProps &#123;</div><div class="line">  name: string;</div><div class="line">&#125;</div><div class="line"></div><div class="line">interface AppState &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">AppProps</span>, <span class="title">AppState</span>&gt; </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(props: AppProps) &#123;</div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="keyword">this</span>.state = &#123;</div><div class="line">      age: <span class="number">35</span></div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">this</span>.setState(&#123;</div><div class="line">      age: <span class="keyword">this</span>.state.age + <span class="number">1</span></div><div class="line">    &#125;);</div><div class="line">  &#125;, <span class="number">2000</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">render() &#123;</div><div class="line">  <span class="keyword">return</span> (</div><div class="line">    &lt;div className=<span class="string">"App"</span>&gt;</div><div class="line">      &#123;<span class="keyword">this</span>.props.name&#125;, &#123;<span class="keyword">this</span>.state.age&#125;</div><div class="line">      &lt;StatelessComponent name=<span class="string">"Anna"</span>&gt; 나는 자식이다.&lt;<span class="regexp">/StatelessComponent&gt;</span></div><div class="line"><span class="regexp">    &lt;/</span>div&gt;</div><div class="line">  )</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> StatelessComponent: React.SFC&lt;AppProps&gt; = <span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> (</div><div class="line">    &lt;h2&gt;&#123;props.name&#125;&#123;props.children&#125;&lt;<span class="regexp">/h2&gt;</span></div><div class="line"><span class="regexp">  )</span></div><div class="line"><span class="regexp">&#125;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">export default App;</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="Lifecycle"><a href="#Lifecycle" class="headerlink" title="Lifecycle"></a>Lifecycle</h1><h2 id="Component-생성-및-마운트"><a href="#Component-생성-및-마운트" class="headerlink" title="Component 생성 및 마운트"></a>Component 생성 및 마운트</h2><ul>
+<li>컴포넌트 생성해서 넣을 때까지 라이프 사이클</li>
+<li>props 나 state 의 상태값이 바뀌었을 때의 라이프 사이클</li>
+</ul>
+<p><strong>constructor -&gt; componentWillMount -&gt; render -&gt; componentDidMount</strong></p>
+<p>컴포넌트를 제거할 때는 componentWillUnmount 메소드만 실행</p>
+<p>컴포넌트의 prop이 변경될 때<br>componentWillReceiveProps -&gt; shouldComponentUpdate -&gt; componentWillUpdate -&gt; render -&gt; componentDidUpdate 순으로 진행</p>
+<p>컴포넌트의 state 값이 변경될 때 shouldComponentUpdate 부터 시작</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> * React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App constructor'</span>); <span class="comment">// 1. constructor 생성</span></div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="keyword">this</span>.state = &#123;</div><div class="line">      age: <span class="number">20</span></div><div class="line">    &#125;; </div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentWillMount() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App componentWillMount'</span>); <span class="comment">// 2.</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App componentDidMount'</span>); <span class="comment">// 4.</span></div><div class="line">    setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.setState(&#123;</div><div class="line">        age: <span class="keyword">this</span>.state.age + <span class="number">1</span></div><div class="line">      &#125;);</div><div class="line">    &#125;, <span class="number">2000</span>);  <span class="comment">// 6. setInterval에 state값을 계속해서 바꿔줘서 render가 계속 뜸, API call 할 때 자주 쓰는 component</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 리액트 컴포넌트를 제거할 때 사용하는 함수</span></div><div class="line">  componentWillUnmount() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App componentWillUnMount'</span>);</div><div class="line">    <span class="comment">// clearInterval(this._interval); // 지정한 interval을 privit 프로퍼티에 넣고 Unmount에서 삭제를 하지 않으면 component가 끝났음에도 불구하고 setInerval이 되면서 메모리를 계속 잡아먹는다라고 함  </span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App render'</span>); <span class="comment">// 3 &amp; 6</span></div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      <span class="comment">// jsx</span></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Component-props-state-변경"><a href="#Component-props-state-변경" class="headerlink" title="Component props, state 변경"></a>Component props, state 변경</h2><p>componentWillReceiveProps</p>
+<ul>
+<li>props 를 새로 지정했을 때 바로 호출</li>
+<li>state 의 변경에 반응하지 않아 props 의 값에 따라 state 를 변경해야한다면, setState 를 이용해 state 를 변경한다. 그러면 다음 이벤트로 각각 가는것이 아니라 한번에 변경 됨.</li>
+</ul>
+<p><strong>shouldComponentUpdate</strong> </p>
+<ul>
+<li>props만 변경되어도</li>
+<li>state만 변경되어도</li>
+<li>props &amp; state 둘다 변경되어도 shouldComponentUpdate로 타고 온다.</li>
+<li>new Props 와 new State 를 인자로 해서 호출</li>
+<li>return type 이 boolean <ul>
+<li>true 면 render</li>
+<li>false 면 render 가 호출되지 않는다.</li>
+<li>props와 state가 바뀌면 일반 컴포넌트에서 구현 안하면 무조건 불림(디폴트는 true)</li>
+</ul>
+</li>
+</ul>
+<p>componentWillUpdate</p>
+<ul>
+<li>컴포넌트가 재 랜더링 되기 직전에 불린다.<ul>
+<li>여기서 setState 같은 것을 쓰면 안됨!! 무한 루프</li>
+</ul>
+</li>
+</ul>
+<p>render</p>
+<p>componentDidUpdate</p>
+<ul>
+<li>컴포넌트가 재 랜더링을 마치면 불림</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">componentWillReceiveProps(nextProps: AppProps) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`App componentWillReceiveProps : <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(nextProps)&#125;</span>`</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">shouldComponentUpdate(nextProps: AppProps, <span class="attr">nextState</span>: AppState): boolean &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`App shouldComponentUpdate : <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(nextProps)&#125;</span>, <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(nextState)&#125;</span>`</span>);</div><div class="line">  <span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">// boolrean type 으로 true 하면 이 이벤트가 다음으로 넘어간다.</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">componentWillUpdate(nextProps: AppProps, <span class="attr">nextState</span>: AppState) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`App componentWillUpdate : <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(nextProps)&#125;</span>, <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(nextState)&#125;</span>`</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">componentDidUpdate(prevProps: AppProps, <span class="attr">prevState</span>: AppState) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`App componentDidUpdate : <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(prevProps)&#125;</span>, <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(prevState)&#125;</span>`</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h1><h2 id="DOM-onclick-gt-JSX-onClick"><a href="#DOM-onclick-gt-JSX-onClick" class="headerlink" title="DOM onclick =&gt; JSX onClick"></a>DOM onclick =&gt; JSX onClick</h2><h2 id="DOM-onchange-gt-JSX-onChange"><a href="#DOM-onchange-gt-JSX-onChange" class="headerlink" title="DOM onchange =&gt; JSX onChange"></a>DOM onchange =&gt; JSX onChange</h2><hr>
+<h1 id="PuerComponent"><a href="#PuerComponent" class="headerlink" title="PuerComponent"></a>PuerComponent</h1><p>shouldComponentUpdate만 다르다.</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://seultt.github.io/2017/12/10/React-cra/" data-id="cjb8y8ab2000d38t5p5q3e6cy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://seultt.github.io/2017/12/10/React-cra/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/12/10/React-cra/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-React-Router" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/12/09/React-Router/">React_Router</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/12/09/React-Router/">
+            <time datetime="2017-12-09T07:23:58.000Z" itemprop="datePublished">2017-12-09</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/React/">React</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/React/">React</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="React-Router"><a href="#React-Router" class="headerlink" title="React Router"></a>React Router</h1><p>공식적인 컴포넌트는 아니지만 REACT TRANING사에서 만든 REACT ROUTER를 많이 사용한다.</p>
+<p>react router는 web 뿐만 아니라 mobile도 가능하다</p>
+<p>일반 정적 웹페이지 같은 경우 다른 데이터 (html문서)를 가지게 됨 - 서버사이드랜더링</p>
+<p><a href="https://hudson.io" target="_blank" rel="external">https://hudson.io</a><br><a href="https://hudson.io/intro" target="_blank" rel="external">https://hudson.io/intro</a></p>
+<p>리액트는 데이터 페치를 클라이언트 사이드에서 처리, 랜더링</p>
+<p>사용자가 처리를 하지 않으면 주소로인한 유의미한 변경을 할수 가 없다.</p>
+<p>리액트 라우터의 역할이 클라이언트 사이드에서 특정 URL로 유저가 접근했을 때, URL을 해석, 기존에 개발자가 선언한대로 그 URL에 알맞는 컴포넌트를 실행시킨다.</p>
+<h2 id="React-Router-V4"><a href="#React-Router-V4" class="headerlink" title="React Router V4"></a>React Router V4</h2><ul>
+<li>React Router의 최신버전</li>
+<li>React Router V3, 그이하와는 API가 다름</li>
+<li>V3도 여전히 유지보수는 진행 중</li>
+<li>대부분의 동작이 React Component 로 이루어짐</li>
+</ul>
+<h2 id="React-Router-맛보기"><a href="#React-Router-맛보기" class="headerlink" title="React Router 맛보기"></a>React Router 맛보기</h2><ul>
+<li>React Router 설치</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn add react-router-dom @types/react-router-dom</div></pre></td></tr></table></figure>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://seultt.github.io/2017/12/09/React-Router/" data-id="cjb8y8ak1000t38t5zxmg3wn5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://seultt.github.io/2017/12/09/React-Router/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/12/09/React-Router/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-TypeScript-Overview" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -428,7 +851,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/21/TypeScript-Overview/" data-id="cjaz0bhz0000e68t50r4ouyrd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/21/TypeScript-Overview/" data-id="cjb8y8aab000638t5qxucvs4l" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -593,7 +1016,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/15/DataType/" data-id="cjaz0bhxb000068t5fdhoytn5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/15/DataType/" data-id="cjb8y8a9i000038t5xl6qmxui" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -734,7 +1157,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/15/React-JSX/" data-id="cjaz0bhyw000968t5qj58ckpg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/15/React-JSX/" data-id="cjb8y8a9u000238t5elzl7fsw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -857,7 +1280,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/08/React-Angular/" data-id="cjaz0bhyr000568t5no9sxvtp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/08/React-Angular/" data-id="cjb8y8aia000s38t5zkqr6x19" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -989,7 +1412,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/06/yaho/" data-id="cjaz0bhyt000768t53jq8lnke" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/06/yaho/" data-id="cjb8y8aat000938t5ko58fr28" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1119,7 +1542,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/06/hello-world/" data-id="cjaz0bhyz000d68t52hn8simb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2017/11/06/hello-world/" data-id="cjb8y8aaq000838t5ut7um6sq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1210,6 +1633,44 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2017/12/10/React-cra/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/React/">React</a></p>
+                            <p class="item-title"><a href="/2017/12/10/React-cra/" class="title">React-setting</a></p>
+                            <p class="item-date"><time datetime="2017-12-10T07:03:13.000Z" itemprop="datePublished">2017-12-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/12/09/React-Router/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/React/">React</a></p>
+                            <p class="item-title"><a href="/2017/12/09/React-Router/" class="title">React_Router</a></p>
+                            <p class="item-date"><time datetime="2017-12-09T07:23:58.000Z" itemprop="datePublished">2017-12-09</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2017/11/21/TypeScript-Overview/" class="thumbnail">
     
     
@@ -1264,44 +1725,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/11/08/React-Angular/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/11/08/React-Angular/" class="title">React / Angular</a></p>
-                            <p class="item-date"><time datetime="2017-11-08T09:59:05.000Z" itemprop="datePublished">2017-11-08</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/11/06/yaho/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/아무거나/">아무거나</a></p>
-                            <p class="item-title"><a href="/2017/11/06/yaho/" class="title">yaho</a></p>
-                            <p class="item-date"><time datetime="2017-11-06T08:11:54.000Z" itemprop="datePublished">2017-11-06</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1311,7 +1734,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Today-I-Learn/">Today I Learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/아무거나/">아무거나</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Today-I-Learn/">Today I Learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/아무거나/">아무거나</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1320,7 +1743,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -1329,7 +1752,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undefined/">undefined</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undefined/">undefined</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1338,7 +1761,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a>
+            <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a>
         </div>
     </div>
 
