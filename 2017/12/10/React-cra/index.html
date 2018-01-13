@@ -12,10 +12,12 @@
 <meta property="og:url" content="https://seultt.github.io/2017/12/10/React-cra/index.html">
 <meta property="og:site_name" content="seultt">
 <meta property="og:description" content="ReactReact는 Virtual Dom 을 사용한다.변하기 전의 state 와 변한 후의 state 의 값을 비교하여 다시 랜더한다! JSX JavaScript XML - JSX  자체는 문법 리액트에서는 JSX.Element 로 그려질 컴포넌트를 표현 React.createElement 함수를 통해서도 JSX.Element를 만들수 있다.  12345">
-<meta property="og:updated_time" content="2017-12-13T17:47:13.805Z">
+<meta property="og:image" content="https://velopert.com/wp-content/uploads/2016/03/Screenshot-from-2016-12-10-00-21-26-1-950x610.png">
+<meta property="og:updated_time" content="2017-12-17T16:46:28.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React-setting">
 <meta name="twitter:description" content="ReactReact는 Virtual Dom 을 사용한다.변하기 전의 state 와 변한 후의 state 의 값을 비교하여 다시 랜더한다! JSX JavaScript XML - JSX  자체는 문법 리액트에서는 JSX.Element 로 그려질 컴포넌트를 표현 React.createElement 함수를 통해서도 JSX.Element를 만들수 있다.  12345">
+<meta name="twitter:image" content="https://velopert.com/wp-content/uploads/2016/03/Screenshot-from-2016-12-10-00-21-26-1-950x610.png">
     
 
     
@@ -79,14 +81,14 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Tulis Sesuatu.." />
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -98,11 +100,11 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Pos',
-            PAGES: 'Halaman',
-            CATEGORIES: 'Kategori',
-            TAGS: 'Tag',
-            UNTITLED: 'Tanpa Judul',
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -132,7 +134,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -152,16 +154,16 @@
             <h2 id="name">seultt</h2>
             <h3 id="title">Web Developer &amp; Designer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Seoul, Korea</span>
-            <a id="follow" target="_blank" href="https://github.com/seultt">IKUTI</a>
+            <a id="follow" target="_blank" href="https://github.com/seultt">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                8
-                <span>pos</span>
+                10
+                <span>posts</span>
             </div>
             <div class="article-info-block">
-                4
-                <span>tag</span>
+                6
+                <span>tags</span>
             </div>
         </div>
         
@@ -344,10 +346,16 @@
 <li>컴포넌트 생성해서 넣을 때까지 라이프 사이클</li>
 <li>props 나 state 의 상태값이 바뀌었을 때의 라이프 사이클</li>
 </ul>
+<p><img src="https://velopert.com/wp-content/uploads/2016/03/Screenshot-from-2016-12-10-00-21-26-1-950x610.png" alt="이미지"></p>
 <p><strong>constructor -&gt; componentWillMount -&gt; render -&gt; componentDidMount</strong></p>
-<p>컴포넌트를 제거할 때는 componentWillUnmount 메소드만 실행</p>
-<p>컴포넌트의 prop이 변경될 때<br>componentWillReceiveProps -&gt; shouldComponentUpdate -&gt; componentWillUpdate -&gt; render -&gt; componentDidUpdate 순으로 진행</p>
-<p>컴포넌트의 state 값이 변경될 때 shouldComponentUpdate 부터 시작</p>
+<ul>
+<li><p>컴포넌트를 제거할 때는 componentWillUnmount 메소드만 실행</p>
+</li>
+<li><p>컴포넌트의 prop이 변경될 때<br>componentWillReceiveProps -&gt; shouldComponentUpdate -&gt; componentWillUpdate -&gt; render -&gt; componentDidUpdate 순으로 진행</p>
+</li>
+<li><p>컴포넌트의 state 값이 변경될 때 <strong>shouldComponentUpdate</strong> 부터 시작</p>
+</li>
+</ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> * React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App constructor'</span>); <span class="comment">// 1. constructor 생성</span></div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="keyword">this</span>.state = &#123;</div><div class="line">      age: <span class="number">20</span></div><div class="line">    &#125;; </div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentWillMount() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App componentWillMount'</span>); <span class="comment">// 2.</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App componentDidMount'</span>); <span class="comment">// 4.</span></div><div class="line">    setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.setState(&#123;</div><div class="line">        age: <span class="keyword">this</span>.state.age + <span class="number">1</span></div><div class="line">      &#125;);</div><div class="line">    &#125;, <span class="number">2000</span>);  <span class="comment">// 6. setInterval에 state값을 계속해서 바꿔줘서 render가 계속 뜸, API call 할 때 자주 쓰는 component</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 리액트 컴포넌트를 제거할 때 사용하는 함수</span></div><div class="line">  componentWillUnmount() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App componentWillUnMount'</span>);</div><div class="line">    <span class="comment">// clearInterval(this._interval); // 지정한 interval을 privit 프로퍼티에 넣고 Unmount에서 삭제를 하지 않으면 component가 끝났음에도 불구하고 setInerval이 되면서 메모리를 계속 잡아먹는다라고 함  </span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App render'</span>); <span class="comment">// 3 &amp; 6</span></div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      <span class="comment">// jsx</span></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Component-props-state-변경"><a href="#Component-props-state-변경" class="headerlink" title="Component props, state 변경"></a>Component props, state 변경</h2><p>componentWillReceiveProps</p>
 <ul>
@@ -393,7 +401,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/12/10/React-cra/" data-id="cjb8ychqr0006k8t5hzv2nwkm" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="https://seultt.github.io/2017/12/10/React-cra/" data-id="cjcdl8e120008pwt5zutoi76i" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -461,7 +469,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/12/10/React-cra/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/12/10/React-cra/">Komentar</a>
+        <a href="https://seultt.github.io/2017/12/10/React-cra/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/12/10/React-cra/">Comments</a>
     
 
         </footer>
@@ -470,9 +478,18 @@
         
 <nav id="article-nav">
     
+        <a href="/2018/01/08/interpreter/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    interpreter
+                
+            </div>
+        </a>
+    
     
         <a href="/2017/12/09/React-Router/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Lebih lama</strong>
+            <strong class="article-nav-caption">Older</strong>
             <div class="article-nav-title">React_Router</div>
         </a>
     
@@ -499,9 +516,47 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Terbaru</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/14/unit-test/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/01/14/unit-test/" class="title">unit_test</a></p>
+                            <p class="item-date"><time datetime="2018-01-13T16:28:34.000Z" itemprop="datePublished">2018-01-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/08/interpreter/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a></p>
+                            <p class="item-title"><a href="/2018/01/08/interpreter/" class="title">interpreter</a></p>
+                            <p class="item-date"><time datetime="2018-01-08T01:17:40.000Z" itemprop="datePublished">2018-01-08</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -560,44 +615,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/11/15/DataType/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a></p>
-                            <p class="item-title"><a href="/2017/11/15/DataType/" class="title">DataType</a></p>
-                            <p class="item-date"><time datetime="2017-11-15T07:17:11.000Z" itemprop="datePublished">2017-11-15</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/11/15/React-JSX/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a></p>
-                            <p class="item-title"><a href="/2017/11/15/React-JSX/" class="title">React-JSX</a></p>
-                            <p class="item-date"><time datetime="2017-11-15T07:14:51.000Z" itemprop="datePublished">2017-11-15</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -605,43 +622,43 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Kategori</h3>
+        <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Today-I-Learn/">Today I Learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/아무거나/">아무거나</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Today-I-Learn/">Today I Learn</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/아무거나/">아무거나</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Arsip</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tag</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undefined/">undefined</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undefined/">undefined</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unitTest/">unitTest</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">awan tag</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a>
+            <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/TIL/" style="font-size: 10px;">TIL</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/unitTest/" style="font-size: 10px;">unitTest</a>
         </div>
     </div>
 
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">tautan</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
@@ -663,7 +680,7 @@
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2017 seultt<br>
+            &copy; 2018 seultt<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>

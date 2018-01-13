@@ -3,19 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>TypeScript-Overview | seultt</title>
+    <title>interpreter | seultt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="TypeScript = Language타입스크립트는? 프로그래밍 언어  Compiled Language  전통적인 Compiled Language와는 다른 점이 있기 때문에 Transpile 이라는 용어를 사용하기도 한다. 컴파일 하는 과정에 타입을 체크하면서 오류들을 사전에 방지할 수 있다. 자바스크립트  인터프리터 언어  개발 환경 구축 및 컴파일러 사">
-<meta name="keywords" content="TypeScript">
+    <meta name="description" content="Compile 과 Interpreting 언어 Interpreter인터프리터(interpreter)는 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경을 말한다. 원시 코드를 기계어로 번역하는 컴파일러와 대비된다.  소스 코드를 직접 실행 소스 코드를 효율적인 다른 중간 코드로 변환하고, 변환한 것을 바로 실행 인터프리터 시스템의 일부">
+<meta name="keywords" content="TIL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TypeScript-Overview">
-<meta property="og:url" content="https://seultt.github.io/2017/11/21/TypeScript-Overview/index.html">
+<meta property="og:title" content="interpreter">
+<meta property="og:url" content="https://seultt.github.io/2018/01/08/interpreter/index.html">
 <meta property="og:site_name" content="seultt">
-<meta property="og:description" content="TypeScript = Language타입스크립트는? 프로그래밍 언어  Compiled Language  전통적인 Compiled Language와는 다른 점이 있기 때문에 Transpile 이라는 용어를 사용하기도 한다. 컴파일 하는 과정에 타입을 체크하면서 오류들을 사전에 방지할 수 있다. 자바스크립트  인터프리터 언어  개발 환경 구축 및 컴파일러 사">
-<meta property="og:updated_time" content="2017-12-09T07:19:39.111Z">
+<meta property="og:description" content="Compile 과 Interpreting 언어 Interpreter인터프리터(interpreter)는 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경을 말한다. 원시 코드를 기계어로 번역하는 컴파일러와 대비된다.  소스 코드를 직접 실행 소스 코드를 효율적인 다른 중간 코드로 변환하고, 변환한 것을 바로 실행 인터프리터 시스템의 일부">
+<meta property="og:image" content="https://seultt.github.io/images/interpreter_001.PNG">
+<meta property="og:updated_time" content="2018-01-08T09:17:52.568Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TypeScript-Overview">
-<meta name="twitter:description" content="TypeScript = Language타입스크립트는? 프로그래밍 언어  Compiled Language  전통적인 Compiled Language와는 다른 점이 있기 때문에 Transpile 이라는 용어를 사용하기도 한다. 컴파일 하는 과정에 타입을 체크하면서 오류들을 사전에 방지할 수 있다. 자바스크립트  인터프리터 언어  개발 환경 구축 및 컴파일러 사">
+<meta name="twitter:title" content="interpreter">
+<meta name="twitter:description" content="Compile 과 Interpreting 언어 Interpreter인터프리터(interpreter)는 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경을 말한다. 원시 코드를 기계어로 번역하는 컴파일러와 대비된다.  소스 코드를 직접 실행 소스 코드를 효율적인 다른 중간 코드로 변환하고, 변환한 것을 바로 실행 인터프리터 시스템의 일부">
+<meta name="twitter:image" content="https://seultt.github.io/images/interpreter_001.PNG">
     
 
     
@@ -196,7 +198,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-TypeScript-Overview" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-interpreter" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -204,7 +206,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            TypeScript-Overview
+            interpreter
         </h1>
     
 
@@ -213,8 +215,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/11/21/TypeScript-Overview/">
-            <time datetime="2017-11-21T14:03:48.000Z" itemprop="datePublished">2017-11-21</time>
+        <a href="/2018/01/08/interpreter/">
+            <time datetime="2018-01-08T01:17:40.000Z" itemprop="datePublished">2018-01-08</time>
         </a>
     </div>
 
@@ -222,13 +224,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/TypeScript/">TypeScript</a>
+        <a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/TypeScript/">TypeScript</a>
+        <a class="tag-link" href="/tags/TIL/">TIL</a>
     </div>
 
                     </div>
@@ -239,175 +241,20 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1 id="TypeScript-Language"><a href="#TypeScript-Language" class="headerlink" title="TypeScript = Language"></a>TypeScript = Language</h1><h2 id="타입스크립트는"><a href="#타입스크립트는" class="headerlink" title="타입스크립트는?"></a>타입스크립트는?</h2><ul>
-<li>프로그래밍 언어 </li>
-<li>Compiled Language</li>
-</ul>
-<p>전통적인 Compiled Language와는 다른 점이 있기 때문에 Transpile 이라는 용어를 사용하기도 한다.</p>
-<p>컴파일 하는 과정에 타입을 체크하면서 오류들을 사전에 방지할 수 있다.</p>
-<p>자바스크립트</p>
+            <h1 id="Compile-과-Interpreting-언어"><a href="#Compile-과-Interpreting-언어" class="headerlink" title="Compile 과 Interpreting 언어"></a>Compile 과 Interpreting 언어</h1><hr>
+<h2 id="Interpreter"><a href="#Interpreter" class="headerlink" title="Interpreter"></a>Interpreter</h2><p>인터프리터(interpreter)는 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경을 말한다. 원시 코드를 기계어로 번역하는 컴파일러와 대비된다.</p>
 <ul>
-<li>인터프리터 언어</li>
+<li>소스 코드를 직접 실행</li>
+<li>소스 코드를 효율적인 다른 중간 코드로 변환하고, 변환한 것을 바로 실행</li>
+<li>인터프리터 시스템의 일부인 컴파일러가 만든, 미리 컴파일된 저장 코드의 실행을 호출한다.</li>
+<li>최초의 인터프리트 방식의 고급 언어는 LISP 였다.</li>
 </ul>
-<h2 id="개발-환경-구축-및-컴파일러-사용"><a href="#개발-환경-구축-및-컴파일러-사용" class="headerlink" title="개발 환경 구축 및 컴파일러 사용"></a>개발 환경 구축 및 컴파일러 사용</h2><h3 id="node-js-설치"><a href="#node-js-설치" class="headerlink" title="node.js 설치"></a>node.js 설치</h3><ul>
-<li><p><a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a></p>
-<ul>
-<li>v6.10.3LTS</li>
-<li>V7.10.0 Current</li>
+<p><strong>&lt;프로그램 인터프리팅 과정&gt;</strong></p>
+<p><img src="\images\interpreter_001.PNG" alt="인터프리터 과정"></p>
+<h2 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h2><ul>
+<li>컴파일 언어 : c, c++, JAVA, C#,, 액 등등</li>
+<li>인터프리터 언어 : 자바스크립트(Javascript), 액션스크립트(ActionScript), VB스크립트, SQL, HTML 등등</li>
 </ul>
-</li>
-<li><p>node.js version manager</p>
-<ul>
-<li>nvm<ul>
-<li><a href="https://github.com/creationix/nvm" target="_blank" rel="external">https://github.com/creationix/nvm</a></li>
-<li><a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="external">https://github.com/coreybutler/nvm-windows</a></li>
-</ul>
-</li>
-<li>n<ul>
-<li><a href="https://github.com/tj/n" target="_blank" rel="external">https://github.com/tj/n</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="타입스크립트-컴파일러-설치"><a href="#타입스크립트-컴파일러-설치" class="headerlink" title="타입스크립트 컴파일러 설치"></a>타입스크립트 컴파일러 설치</h3><p>  npm /Visual Studio plugin</p>
-<ul>
-<li>npm <ul>
-<li>npm i typescript -g 전역</li>
-<li>node_modules/.bin/tsc</li>
-<li>tsc source.ts</li>
-</ul>
-</li>
-<li>Visual Studio plugin 설치<ul>
-<li>Visual Studio 2017 / 2015 Update 3 에서는 디폴트로 설치되어 있음</li>
-<li>아니면 설치</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 추가</div><div class="line">"scripts": &#123;</div><div class="line">  "transpile": "tsc" // === "transpile":"node_modules/.bin/tsc"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>npm script에서는 scripts 안에 transpile이라는 명령어를 지정해 놓고 package.json을 기준으로 상대경로를 쓸 필요 없이<br>node 모듈’s에 있는 .bin에 있는 명령어들은 바로 사용할 수 있도록 지정해 놓았다.</p>
-<p>tsc를 불러서 컴파일을 하겠다!! </p>
-<hr>
-<h2 id="TypeScript-Basic-Types"><a href="#TypeScript-Basic-Types" class="headerlink" title="TypeScript Basic Types"></a>TypeScript Basic Types</h2><p>TypeScript 에서 프로그램 작성을 위해 기본 제공하는 데이터 타입</p>
-<p>JavaScript 기본 자료형 포함(Superset)</p>
-<ul>
-<li>ECMAScript 표준에 따른 기본 자료형은 6가지<ul>
-<li>Boolean</li>
-<li>Number</li>
-<li>String</li>
-<li>Null</li>
-<li>Undefined</li>
-<li>Symbol (ECMAScript 6 에 추가)</li>
-<li>Array: object 형</li>
-</ul>
-</li>
-<li>프로그래밍을 도울 몇가지 타입이 더 제공(함수를 리턴할때 주로 쓰임)<ul>
-<li>Any</li>
-<li>Void</li>
-<li>Never</li>
-<li>Enum</li>
-<li>Tuple: object 형</li>
-</ul>
-</li>
-</ul>
-<h3 id="Primitive-Type-원시값"><a href="#Primitive-Type-원시값" class="headerlink" title="Primitive Type = 원시값"></a>Primitive Type = 원시값</h3><ul>
-<li>오브젝트와 레퍼런스 형태가 아닌 실제 값을 저장하는 자료형</li>
-<li>프리미티브 형의 내장 함수를 사용 가능한것은 자바스크립트 처리 방식 덕분</li>
-</ul>
-<h3 id="literal-값"><a href="#literal-값" class="headerlink" title="literal = 값"></a>literal = 값</h3><ul>
-<li>값자체가 변하지 않는 값을 의미한다.</li>
-<li>상수와 다른 것은 상수는 가리키는 포인터가 고정이라는 것이고, 리터럴은 그 자체가 값이자 그릇이다.</li>
-</ul>
-<h3 id="Boolean-boolean"><a href="#Boolean-boolean" class="headerlink" title="Boolean / boolean"></a>Boolean / boolean</h3><ul>
-<li>소문자 boolean 은 프리미티브 boolean</li>
-<li>대문자 Boolean 은 레퍼 오브젝트형식의 생성자오브젝트의 Boolean</li>
-<li>권장은 프리미티브 타입을 권장한다.</li>
-</ul>
-<h3 id="undefined-amp-null-are-subtypes-of-all-other-types"><a href="#undefined-amp-null-are-subtypes-of-all-other-types" class="headerlink" title="undefined &amp; null are subtypes of all other types."></a>undefined &amp; null are subtypes of all other types.</h3><ul>
-<li>모든 타입의 서브 타입이다. </li>
-<li>다른 모든 타입에 대입, 할당이 가능하다!</li>
-<li>하지만, 컴파일 옵션에서 ‘–strictNullCheecks’ 사용하면, null 과 undefined 는 void 나 자기 자신들에게만 할당할 수 있다. 이 경우, null 과 undefined 를 할당할 수 있게 하려면, union type 을 이용해야 한다.</li>
-</ul>
-<h3 id="void"><a href="#void" class="headerlink" title="void"></a>void</h3><ul>
-<li>타입이 없는 상태</li>
-<li>‘any’ 와 반대의 이미</li>
-<li>주로 함수의 리턴이 없을 때 사용, 그 외에는 사용할 일이 거의 없다.</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">returnVoid</span>(<span class="params">message</span>): <span class="title">void</span> </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(message);</div><div class="line">&#125;</div><div class="line"></div><div class="line">returnVoid(<span class="string">'리턴이 없다.'</span>);</div></pre></td></tr></table></figure>
-<h3 id="any"><a href="#any" class="headerlink" title="any"></a>any</h3><ul>
-<li>어떤 타입이어도 상관이 없는 타입</li>
-<li>이걸 최대한 쓰지 않는게 핵심, 이유는 컴파일 타입에 타입 체크가 정상적으로 이뤄지지 않기 때문 컴파일 옵션 중에는 any 를 쓰면 오류를 뱉도록 하는 옵션이 있음(nolmplicitAny)</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">returnAny</span>(<span class="params">message</span>): <span class="title">any</span> </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(message);</div><div class="line">&#125;</div><div class="line"></div><div class="line">returnVoid&#123;<span class="string">'리턴은 아무거나'</span>&#125;</div></pre></td></tr></table></figure>
-<h3 id="never"><a href="#never" class="headerlink" title="never"></a>never</h3><ul>
-<li>리턴에 주로 사용됨</li>
-<li>아래 3가지 정도</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Function returning never must have unreachable end point</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">message: string</span>): <span class="title">never</span> </span>&#123;</div><div class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(message);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Inferred return type is never</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fail</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> error(<span class="string">"Something filed"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Function returning never must have unreachable end point</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">infiniteLoop</span>(<span class="params"></span>): <span class="title">never</span> </span>&#123;</div><div class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) &#123;   </div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><ul>
-<li>원래 자바스크립트에서 array 는 객체이다.</li>
-<li>사용방법<ul>
-<li>Array&lt;타입&gt;</li>
-<li>타입[]</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> list: number[] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">let</span> list: <span class="built_in">Array</span>&lt;number&gt; = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div></pre></td></tr></table></figure>
-<h3 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h3><ul>
-<li>배열인데 타입이 한가지가 아닌 경우</li>
-<li>마찬가지로 객체</li>
-<li>꺼내 사용할때 주의가 필요<ul>
-<li>배열을 Destructuring 하면 타입이 제대로 얻어진다.</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Declare a tuple type</span></div><div class="line"><span class="keyword">let</span> x: [strung, number];</div><div class="line"><span class="comment">//Initialize it</span></div><div class="line">x = [<span class="string">"hello"</span>, <span class="number">10</span>]; <span class="comment">// OK</span></div><div class="line"><span class="comment">//Initialize it</span></div><div class="line">x = [<span class="number">10</span>, <span class="string">"hello"</span>]; <span class="comment">// Error</span></div><div class="line"></div><div class="line">x[<span class="number">3</span>] = <span class="string">"world"</span> <span class="comment">// OK, 'string' can be assigned to 'string I number'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(x[<span class="number">5</span>].toString()) <span class="comment">// OK, 'string' and 'number both have 'toString'</span></div><div class="line"></div><div class="line">x[<span class="number">6</span>] = <span class="literal">true</span>; <span class="comment">// Error, 'boolean' isn't 'string I number'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> person: [string, number] = [<span class="string">'mark'</span>, <span class="number">35</span>];</div><div class="line"></div><div class="line"><span class="keyword">const</span> [name, age] = person;</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="var-let-const"><a href="#var-let-const" class="headerlink" title="var, let, const"></a>var, let, const</h2><h3 id="var"><a href="#var" class="headerlink" title="var"></a>var</h3><ul>
-<li>ES5 </li>
-<li>변수의 유효 범위: 함수 스코프</li>
-<li>호이스팅 (o);</li>
-<li>재선언 가능</li>
-</ul>
-<h3 id="let-const"><a href="#let-const" class="headerlink" title="let, const"></a>let, const</h3><ul>
-<li>ES6</li>
-<li>변수의 유효 범위: 블록 스코프(친숙)</li>
-<li>호이스팅 (x)</li>
-<li>재선언 불가</li>
-</ul>
-<ul>
-<li>var 말고 let, const*</li>
-</ul>
-<hr>
-<h2 id="Type-assertions"><a href="#Type-assertions" class="headerlink" title="Type assertions"></a>Type assertions</h2><ul>
-<li>type checking 에 쓰인다.</li>
-<li>문법적으로는 두가지 방법이 있다.<ul>
-<li>변수 as 강제할 타입</li>
-<li>&lt;강제할 타입&gt;변수</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> someValue: any = <span class="string">"this is a string"</span>;</div><div class="line"><span class="keyword">let</span> strLength: number = (&lt;string&gt;someValue).length;</div><div class="line">let strLength: number = (someValue as string).length;</div></pre></td></tr></table></figure>
-<ol>
-<li>주로 넓은 타입에서 좁은 타입으로 강제하는 경우가 많다.</li>
-<li>jsx 에서는 as 를 쓴다.</li>
-</ol>
-<h2 id="Type-alias-타입-별칭-별명"><a href="#Type-alias-타입-별칭-별명" class="headerlink" title="Type alias 타입, 별칭(별명)"></a>Type alias 타입, 별칭(별명)</h2><ul>
-<li>인터페이스랑 비슷</li>
-<li>Primitive, Union Type, Tuple</li>
-<li>기타 직접 작성해야하는 타입을 다른 이름을 지정할 수 있다.</li>
-<li>만들어진 타입의 refer 로 사용하는 것이지 타입을 만드는 것은 아니다</li>
-</ul>
-<h3 id="Aliasing-Union"><a href="#Aliasing-Union" class="headerlink" title="Aliasing Union"></a>Aliasing Union</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> person: string | number =<span class="number">0</span>;</div><div class="line">person = <span class="string">'Mark'</span>;</div><div class="line"></div><div class="line">type StringOrNumber = string | number;</div><div class="line"></div><div class="line"><span class="keyword">let</span> another: StringOrNumber = <span class="number">0</span>;</div><div class="line">another = <span class="string">'Anna'</span>;</div></pre></td></tr></table></figure>
-<ol>
-<li>유니온 타입은 A 도 가능하고 B 도 가능한 타입</li>
-<li>길게 쓰는걸 짧게</li>
-</ol>
-<h3 id="Aliasing-Tuple"><a href="#Aliasing-Tuple" class="headerlink" title="Aliasing Tuple"></a>Aliasing Tuple</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> person: [string, number] = [<span class="string">'Mark'</span>, <span class="number">35</span>];</div><div class="line"></div><div class="line">type PersonTuple = [string, number];</div><div class="line"></div><div class="line"><span class="keyword">let</span> another: PersonTuple = [<span class="string">'Anna'</span>, <span class="number">24</span>];</div></pre></td></tr></table></figure>
-<ol>
-<li>튜플 타입에 별칭을 줘서 여러곳 에서 사용</li>
-</ol>
-<hr>
 
         
         </div>
@@ -418,7 +265,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/21/TypeScript-Overview/" data-id="cjcdl8e0z0006pwt58mafyltm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://seultt.github.io/2018/01/08/interpreter/" data-id="cjcdl8e130009pwt5rwnkve2t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -486,7 +333,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/11/21/TypeScript-Overview/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/21/TypeScript-Overview/">Comments</a>
+        <a href="https://seultt.github.io/2018/01/08/interpreter/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2018/01/08/interpreter/">Comments</a>
     
 
         </footer>
@@ -495,19 +342,19 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/12/09/React-Router/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2018/01/14/unit-test/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    React_Router
+                    unit_test
                 
             </div>
         </a>
     
     
-        <a href="/2017/11/15/DataType/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/12/10/React-cra/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">DataType</div>
+            <div class="article-nav-title">React-setting</div>
         </a>
     
 </nav>
@@ -707,9 +554,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'https://seultt.github.io/2017/11/21/TypeScript-Overview/';
+            this.page.url = 'https://seultt.github.io/2018/01/08/interpreter/';
         
-        this.page.identifier = 'TypeScript-Overview';
+        this.page.identifier = 'interpreter';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

@@ -74,14 +74,14 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Tulis Sesuatu.." />
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -93,11 +93,11 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Pos',
-            PAGES: 'Halaman',
-            CATEGORIES: 'Kategori',
-            TAGS: 'Tag',
-            UNTITLED: 'Tanpa Judul',
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -127,7 +127,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -147,16 +147,16 @@
             <h2 id="name">seultt</h2>
             <h3 id="title">Web Developer &amp; Designer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Seoul, Korea</span>
-            <a id="follow" target="_blank" href="https://github.com/seultt">IKUTI</a>
+            <a id="follow" target="_blank" href="https://github.com/seultt">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                8
-                <span>pos</span>
+                10
+                <span>posts</span>
             </div>
             <div class="article-info-block">
-                4
-                <span>tag</span>
+                6
+                <span>tags</span>
             </div>
         </div>
         
@@ -192,6 +192,333 @@
 
             
             <section id="main">
+    <article id="post-unit-test" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/01/14/unit-test/">unit_test</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/01/14/unit-test/">
+            <time datetime="2018-01-13T16:28:34.000Z" itemprop="datePublished">2018-01-14</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/unitTest/">unitTest</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h2 id="테스트-gt-유닛테스트"><a href="#테스트-gt-유닛테스트" class="headerlink" title="테스트 =&gt; 유닛테스트"></a>테스트 =&gt; 유닛테스트</h2><p>Unit이란?</p>
+<ul>
+<li>A single function or class.</li>
+<li>최소한의 코드 조각</li>
+<li>개발자가 자신이 구현한 Unit이 생각한대로 작동하는 지 확인하는 행위</li>
+</ul>
+<p>오픈소스<br>react github</p>
+<p>다양한 테스트 프레임 워크들<br><strong>jest</strong>, mocha, 카이?  </p>
+<h3 id="jsest"><a href="#jsest" class="headerlink" title="jsest"></a>jsest</h3><ul>
+<li>describe</li>
+<li>it</li>
+</ul>
+<p>describe</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">describe(“getWordList”, () =&gt; &#123; <span class="comment">// test 하고자하는 함수 이름 혹은 클래스(컴포넌트) 이름</span></div><div class="line">  context(“when user is logged <span class="keyword">in</span>”, () =&gt; &#123; <span class="comment">// 어떤 조건인지를 명시하고 싶을때</span></div><div class="line">    it(“returns <span class="number">200</span> status code”, () =&gt; &#123;</div><div class="line">      <span class="comment">// 실질적으로 테스트 하려는 것</span></div><div class="line">    &#125;)</div><div class="line">    it(“returns word list data code”, () =&gt; &#123;</div><div class="line">      <span class="comment">// 실질적으로 테스트 하려는 것</span></div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="Integration-Test-End-to-End-Test"><a href="#Integration-Test-End-to-End-Test" class="headerlink" title="Integration Test = End to End Test"></a>Integration Test = End to End Test</h2><ul>
+<li>시스템 테스트</li>
+</ul>
+<h3 id="Unit-Test는-왜-필요할까"><a href="#Unit-Test는-왜-필요할까" class="headerlink" title="Unit Test는 왜 필요할까?"></a>Unit Test는 왜 필요할까?</h3><ul>
+<li>굳이 필요 없을 것만 같다.</li>
+<li>어느 정도는 공감을 하는 부분 (개인 취향)</li>
+<li><strong>하지만</strong> 다음과 같은 경우에는 꼭 필요<ul>
+<li>본인의 코드를 다른 사람과 공유할 때</li>
+<li>오픈 소스, 팀 단위의 프로젝트 작업</li>
+</ul>
+</li>
+<li>코드를 <strong>잘</strong> 짜게끔 유도를 해준다<br>​- 바람직한 경우, 예외의 경우</li>
+<li>리팩토링을 상대적으로 마음 편하게 할 수 있다.</li>
+</ul>
+<h3 id="Unit-Test의-범위는"><a href="#Unit-Test의-범위는" class="headerlink" title="Unit Test의 범위는?"></a>Unit Test의 범위는?</h3><p> 코드 베이스 내 모든 코드 조각<br>하나의 js 파일 =&gt; 하나의 spec.js 파일</p>
+<h3 id="Unit-Test는-언제"><a href="#Unit-Test는-언제" class="headerlink" title="Unit Test는 언제?"></a>Unit Test는 언제?</h3><ul>
+<li>중요한 이슈</li>
+<li>실제 코드 작성하기 전에 테스트 코드 부터 작성<ul>
+<li>비직관적이지만 생각해보면 사양서를 먼저 쓴다고 생각하면 됨</li>
+<li>이런식으로 작업하는 것이 TDD</li>
+</ul>
+</li>
+<li>코드와 병행하면서 작성, 혹은 작성 직후 작성<ul>
+<li>무난하면서 일반적인 접근</li>
+</ul>
+</li>
+<li>코드 작성 후 테스트 작성<ul>
+<li>거의 불가능. 내일부터 공부해야지 마인드</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h3 id="순수-퓨처-function-주어진-것에서-같은-결과-값"><a href="#순수-퓨처-function-주어진-것에서-같은-결과-값" class="headerlink" title="순수 퓨처 function 주어진 것에서 같은 결과 값"></a>순수 퓨처 function 주어진 것에서 같은 결과 값</h3><h3 id="언제-실행했는지에-대해-의존성이-있는-함수는-테스트-하기-힘들다"><a href="#언제-실행했는지에-대해-의존성이-있는-함수는-테스트-하기-힘들다" class="headerlink" title="언제 실행했는지에 대해 의존성이 있는 함수는 테스트 하기 힘들다."></a>언제 실행했는지에 대해 의존성이 있는 함수는 테스트 하기 힘들다.</h3><ul>
+<li>어떤 것이 더 좋은 코드일까?</li>
+<li>테스트 하면 =&gt; 코드를 잘 짜게끔 해준다 =&gt; 좋은 코드란?</li>
+<li>코드간의 의존성이 적은. 독립적.</li>
+<li>Isolated. 상대방에게 영향을 주지도 받지도 않는</li>
+<li>Deterministic. 정의된. 1억번 함수 실행시키면 1억번 똑같이 실행되는 함수</li>
+<li>명료한. 함수 이름과 기능이 일대일 매치</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm run <span class="built_in">test</span></div></pre></td></tr></table></figure>
+<p>colors.spec.js</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://seultt.github.io/2018/01/14/unit-test/" data-id="cjcdl8e17000dpwt5hlp3szom" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://seultt.github.io/2018/01/14/unit-test/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2018/01/14/unit-test/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-interpreter" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/01/08/interpreter/">interpreter</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/01/08/interpreter/">
+            <time datetime="2018-01-08T01:17:40.000Z" itemprop="datePublished">2018-01-08</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/TIL/">TIL</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="Compile-과-Interpreting-언어"><a href="#Compile-과-Interpreting-언어" class="headerlink" title="Compile 과 Interpreting 언어"></a>Compile 과 Interpreting 언어</h1><hr>
+<h2 id="Interpreter"><a href="#Interpreter" class="headerlink" title="Interpreter"></a>Interpreter</h2><p>인터프리터(interpreter)는 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경을 말한다. 원시 코드를 기계어로 번역하는 컴파일러와 대비된다.</p>
+<ul>
+<li>소스 코드를 직접 실행</li>
+<li>소스 코드를 효율적인 다른 중간 코드로 변환하고, 변환한 것을 바로 실행</li>
+<li>인터프리터 시스템의 일부인 컴파일러가 만든, 미리 컴파일된 저장 코드의 실행을 호출한다.</li>
+<li>최초의 인터프리트 방식의 고급 언어는 LISP 였다.</li>
+</ul>
+<p><strong>&lt;프로그램 인터프리팅 과정&gt;</strong></p>
+<p><img src="\images\interpreter_001.PNG" alt="인터프리터 과정"></p>
+<h2 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h2><ul>
+<li>컴파일 언어 : c, c++, JAVA, C#,, 액 등등</li>
+<li>인터프리터 언어 : 자바스크립트(Javascript), 액션스크립트(ActionScript), VB스크립트, SQL, HTML 등등</li>
+</ul>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://seultt.github.io/2018/01/08/interpreter/" data-id="cjcdl8e130009pwt5rwnkve2t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://seultt.github.io/2018/01/08/interpreter/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2018/01/08/interpreter/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-React-cra" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -340,10 +667,16 @@
 <li>컴포넌트 생성해서 넣을 때까지 라이프 사이클</li>
 <li>props 나 state 의 상태값이 바뀌었을 때의 라이프 사이클</li>
 </ul>
+<p><img src="https://velopert.com/wp-content/uploads/2016/03/Screenshot-from-2016-12-10-00-21-26-1-950x610.png" alt="이미지"></p>
 <p><strong>constructor -&gt; componentWillMount -&gt; render -&gt; componentDidMount</strong></p>
-<p>컴포넌트를 제거할 때는 componentWillUnmount 메소드만 실행</p>
-<p>컴포넌트의 prop이 변경될 때<br>componentWillReceiveProps -&gt; shouldComponentUpdate -&gt; componentWillUpdate -&gt; render -&gt; componentDidUpdate 순으로 진행</p>
-<p>컴포넌트의 state 값이 변경될 때 shouldComponentUpdate 부터 시작</p>
+<ul>
+<li><p>컴포넌트를 제거할 때는 componentWillUnmount 메소드만 실행</p>
+</li>
+<li><p>컴포넌트의 prop이 변경될 때<br>componentWillReceiveProps -&gt; shouldComponentUpdate -&gt; componentWillUpdate -&gt; render -&gt; componentDidUpdate 순으로 진행</p>
+</li>
+<li><p>컴포넌트의 state 값이 변경될 때 <strong>shouldComponentUpdate</strong> 부터 시작</p>
+</li>
+</ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> * React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App constructor'</span>); <span class="comment">// 1. constructor 생성</span></div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="keyword">this</span>.state = &#123;</div><div class="line">      age: <span class="number">20</span></div><div class="line">    &#125;; </div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentWillMount() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App componentWillMount'</span>); <span class="comment">// 2.</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App componentDidMount'</span>); <span class="comment">// 4.</span></div><div class="line">    setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.setState(&#123;</div><div class="line">        age: <span class="keyword">this</span>.state.age + <span class="number">1</span></div><div class="line">      &#125;);</div><div class="line">    &#125;, <span class="number">2000</span>);  <span class="comment">// 6. setInterval에 state값을 계속해서 바꿔줘서 render가 계속 뜸, API call 할 때 자주 쓰는 component</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 리액트 컴포넌트를 제거할 때 사용하는 함수</span></div><div class="line">  componentWillUnmount() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App componentWillUnMount'</span>);</div><div class="line">    <span class="comment">// clearInterval(this._interval); // 지정한 interval을 privit 프로퍼티에 넣고 Unmount에서 삭제를 하지 않으면 component가 끝났음에도 불구하고 setInerval이 되면서 메모리를 계속 잡아먹는다라고 함  </span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'App render'</span>); <span class="comment">// 3 &amp; 6</span></div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      <span class="comment">// jsx</span></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Component-props-state-변경"><a href="#Component-props-state-변경" class="headerlink" title="Component props, state 변경"></a>Component props, state 변경</h2><p>componentWillReceiveProps</p>
 <ul>
@@ -389,7 +722,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/12/10/React-cra/" data-id="cjb8ychqr0006k8t5hzv2nwkm" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="https://seultt.github.io/2017/12/10/React-cra/" data-id="cjcdl8e120008pwt5zutoi76i" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -457,7 +790,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/12/10/React-cra/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/12/10/React-cra/">Komentar</a>
+        <a href="https://seultt.github.io/2017/12/10/React-cra/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/12/10/React-cra/">Comments</a>
     
 
         </footer>
@@ -537,7 +870,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/12/09/React-Router/" data-id="cjb8ychqq0005k8t5lguzgep9" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="https://seultt.github.io/2017/12/09/React-Router/" data-id="cjcdl8eb7000zpwt55ixyj8ec" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -605,7 +938,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/12/09/React-Router/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/12/09/React-Router/">Komentar</a>
+        <a href="https://seultt.github.io/2017/12/09/React-Router/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/12/09/React-Router/">Comments</a>
     
 
         </footer>
@@ -837,7 +1170,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/21/TypeScript-Overview/" data-id="cjb8ychqu000ak8t5k5ku8fjc" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="https://seultt.github.io/2017/11/21/TypeScript-Overview/" data-id="cjcdl8e0z0006pwt58mafyltm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -905,7 +1238,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/11/21/TypeScript-Overview/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/21/TypeScript-Overview/">Komentar</a>
+        <a href="https://seultt.github.io/2017/11/21/TypeScript-Overview/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/21/TypeScript-Overview/">Comments</a>
     
 
         </footer>
@@ -1002,7 +1335,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/15/DataType/" data-id="cjb8ychqf0000k8t5dn23xjt7" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="https://seultt.github.io/2017/11/15/DataType/" data-id="cjcdl8e0l0000pwt5qf6ty0ec" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1070,7 +1403,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/11/15/DataType/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/15/DataType/">Komentar</a>
+        <a href="https://seultt.github.io/2017/11/15/DataType/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/15/DataType/">Comments</a>
     
 
         </footer>
@@ -1143,7 +1476,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/15/React-JSX/" data-id="cjb8ychqo0004k8t52cswia5e" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="https://seultt.github.io/2017/11/15/React-JSX/" data-id="cjcdl8e0s0002pwt53tploysy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1211,7 +1544,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/11/15/React-JSX/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/15/React-JSX/">Komentar</a>
+        <a href="https://seultt.github.io/2017/11/15/React-JSX/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/15/React-JSX/">Comments</a>
     
 
         </footer>
@@ -1266,7 +1599,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/08/React-Angular/" data-id="cjb8ychqk0001k8t51iw4opjv" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="https://seultt.github.io/2017/11/08/React-Angular/" data-id="cjcdl8e1i000lpwt55ebbmk75" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1334,7 +1667,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/11/08/React-Angular/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/08/React-Angular/">Komentar</a>
+        <a href="https://seultt.github.io/2017/11/08/React-Angular/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/08/React-Angular/">Comments</a>
     
 
         </footer>
@@ -1398,7 +1731,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/06/yaho/" data-id="cjb8ychrv000rk8t513cbh9wz" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="https://seultt.github.io/2017/11/06/yaho/" data-id="cjcdl8e19000epwt56trfek71" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1466,7 +1799,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/11/06/yaho/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/06/yaho/">Komentar</a>
+        <a href="https://seultt.github.io/2017/11/06/yaho/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/06/yaho/">Comments</a>
     
 
         </footer>
@@ -1528,7 +1861,7 @@
 
 </div>
 
-    <a data-url="https://seultt.github.io/2017/11/06/hello-world/" data-id="cjb8ychqw000bk8t5k39g4npq" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="https://seultt.github.io/2017/11/06/hello-world/" data-id="cjcdl8e1g000ipwt59y22negn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1596,7 +1929,7 @@
 
             
     
-        <a href="https://seultt.github.io/2017/11/06/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/06/hello-world/">Komentar</a>
+        <a href="https://seultt.github.io/2017/11/06/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://seultt.github.io/2017/11/06/hello-world/">Comments</a>
     
 
         </footer>
@@ -1612,9 +1945,47 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Terbaru</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/14/unit-test/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/01/14/unit-test/" class="title">unit_test</a></p>
+                            <p class="item-date"><time datetime="2018-01-13T16:28:34.000Z" itemprop="datePublished">2018-01-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/08/interpreter/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a></p>
+                            <p class="item-title"><a href="/2018/01/08/interpreter/" class="title">interpreter</a></p>
+                            <p class="item-date"><time datetime="2018-01-08T01:17:40.000Z" itemprop="datePublished">2018-01-08</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -1673,44 +2044,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/11/15/DataType/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a></p>
-                            <p class="item-title"><a href="/2017/11/15/DataType/" class="title">DataType</a></p>
-                            <p class="item-date"><time datetime="2017-11-15T07:17:11.000Z" itemprop="datePublished">2017-11-15</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/11/15/React-JSX/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Today-I-Learn/">Today I Learn</a></p>
-                            <p class="item-title"><a href="/2017/11/15/React-JSX/" class="title">React-JSX</a></p>
-                            <p class="item-date"><time datetime="2017-11-15T07:14:51.000Z" itemprop="datePublished">2017-11-15</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1718,43 +2051,43 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Kategori</h3>
+        <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Today-I-Learn/">Today I Learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/아무거나/">아무거나</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Today-I-Learn/">Today I Learn</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/아무거나/">아무거나</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Arsip</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tag</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undefined/">undefined</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undefined/">undefined</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unitTest/">unitTest</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">awan tag</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a>
+            <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/TIL/" style="font-size: 10px;">TIL</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/unitTest/" style="font-size: 10px;">unitTest</a>
         </div>
     </div>
 
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">tautan</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
@@ -1776,7 +2109,7 @@
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2017 seultt<br>
+            &copy; 2018 seultt<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
