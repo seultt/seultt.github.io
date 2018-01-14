@@ -50,6 +50,63 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2018-01-14T14:53:48.000Z"><a href="/2018/01/14/git-repo-update/">2018-01-14</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/01/14/git-repo-update/">git_repo_update</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Git-repository-최신으로-동기화"><a href="#Git-repository-최신으로-동기화" class="headerlink" title="[Git] repository 최신으로 동기화"></a>[Git] repository 최신으로 동기화</h1><ol>
+<li>연결 상태 확인</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git remote -v </div><div class="line">origin  https://github.com/A_USERNAME/A_FORK.git (fetch)</div><div class="line">origin  https://github.com/A_USERNAME/A_FORK.git (push)</div></pre></td></tr></table></figure>
+<ol>
+<li>원본 repository 를 upstream 또는 연결 시킬 레포 user name 으로 추가</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote add B https://github.com/B_USERNAME/B_ORIGINAL.git</div></pre></td></tr></table></figure>
+<ol>
+<li>제대로 되었는지 확인</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ git remote -v </div><div class="line">origin  https://github.com/A_USERNAME/A_FORK.git (fetch)</div><div class="line">origin  https://github.com/A_USERNAME/A_FORK.git (push)</div><div class="line">B https://github.com/B_USERNAME/B_ORIGINAL.git(fetch)</div><div class="line">B https://github.com/B_USERNAME/B_ORIGINAL.git(push)</div></pre></td></tr></table></figure>
+<ol>
+<li>B repository 에서 최신 업데이트를 가져와야 하는데<br>Git 의 fetch 명령어를 통해 upstream repository 의 내용을 불러온다.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ git fetch B</div><div class="line">remote: Counting objects: 75, <span class="keyword">done</span>.</div><div class="line">remote: Compressing objects: 100% (53/53), <span class="keyword">done</span>.</div><div class="line">remote: Total 62 (delta 27), reused 44 (delta 9)</div><div class="line">Unpacking objects: 100% (62/62), <span class="keyword">done</span>.</div><div class="line">From https://github.com/B_USERNAME/B_ORIGINAL</div><div class="line"> * [new branch]      master     -&gt; upstream/master</div></pre></td></tr></table></figure>
+<ol>
+<li>B repository 의 master branch (혹은 원하는 branch) 로부터 나의 local master branch 로 merge 한다.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ git checkout master</div><div class="line">Switched to branch <span class="string">'master'</span></div><div class="line"></div><div class="line">$ git merge upstream/master</div><div class="line">Updating a422352..5fdff0f</div><div class="line">Fast-forward</div><div class="line"> README                    |    9 -------</div><div class="line"> README.md                 |    7 ++++++</div><div class="line"> 2 files changed, 7 insertions(+), 9 deletions(-)</div><div class="line"> delete mode 100644 README</div><div class="line"> create mode 100644 README.md</div></pre></td></tr></table></figure>
+<ol>
+<li>5번은 내 local repository 에서 일어난 것이므로 push 를 통해 remote repository 에도 적용시켜주면 완료!</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
+<p>참고 : <a href="https://json.postype.com/post/210431" target="_blank" rel="external">https://json.postype.com/post/210431</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2018-01-13T16:28:34.000Z"><a href="/2018/01/14/unit-test/">2018-01-14</a></time>
       
       
@@ -784,50 +841,11 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-11-06T07:24:36.518Z"><a href="/2017/11/06/hello-world/">2017-11-06</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2017/11/06/hello-world/">Hello World</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
+  
+    <a href="/page/2/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
@@ -852,6 +870,8 @@
   
     <li><a href="/categories/TypeScript/">TypeScript</a><small>1</small></li>
   
+    <li><a href="/categories/git/">git</a><small>1</small></li>
+  
     <li><a href="/categories/아무거나/">아무거나</a><small>1</small></li>
   
   </ul>
@@ -870,6 +890,8 @@
     <li><a href="/tags/TIL/">TIL</a><small>1</small></li>
   
     <li><a href="/tags/TypeScript/">TypeScript</a><small>1</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
   
     <li><a href="/tags/undefined/">undefined</a><small>1</small></li>
   

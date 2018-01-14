@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git_repo_update | seultt</title>
+  <meta name="author" content="seultt">
+  
+  <meta name="description" content="[Git] repository 최신으로 동기화
+연결 상태 확인
+
+123$ git remote -v origin  https://github.com/A_USERNAME/A_FORK.git (fetch)origin  https://github.com/A_USERNAME/A">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="git_repo_update"/>
+  <meta property="og:site_name" content="seultt"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="seultt" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">seultt</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-01-14T14:53:48.000Z"><a href="/2018/01/14/git-repo-update/">2018-01-14</a></time>
+      
+      
+  
+    <h1 class="title">git_repo_update</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Git-repository-최신으로-동기화"><a href="#Git-repository-최신으로-동기화" class="headerlink" title="[Git] repository 최신으로 동기화"></a>[Git] repository 최신으로 동기화</h1><ol>
+<li>연결 상태 확인</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git remote -v </div><div class="line">origin  https://github.com/A_USERNAME/A_FORK.git (fetch)</div><div class="line">origin  https://github.com/A_USERNAME/A_FORK.git (push)</div></pre></td></tr></table></figure>
+<ol>
+<li>원본 repository 를 upstream 또는 연결 시킬 레포 user name 으로 추가</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote add B https://github.com/B_USERNAME/B_ORIGINAL.git</div></pre></td></tr></table></figure>
+<ol>
+<li>제대로 되었는지 확인</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ git remote -v </div><div class="line">origin  https://github.com/A_USERNAME/A_FORK.git (fetch)</div><div class="line">origin  https://github.com/A_USERNAME/A_FORK.git (push)</div><div class="line">B https://github.com/B_USERNAME/B_ORIGINAL.git(fetch)</div><div class="line">B https://github.com/B_USERNAME/B_ORIGINAL.git(push)</div></pre></td></tr></table></figure>
+<ol>
+<li>B repository 에서 최신 업데이트를 가져와야 하는데<br>Git 의 fetch 명령어를 통해 upstream repository 의 내용을 불러온다.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ git fetch B</div><div class="line">remote: Counting objects: 75, <span class="keyword">done</span>.</div><div class="line">remote: Compressing objects: 100% (53/53), <span class="keyword">done</span>.</div><div class="line">remote: Total 62 (delta 27), reused 44 (delta 9)</div><div class="line">Unpacking objects: 100% (62/62), <span class="keyword">done</span>.</div><div class="line">From https://github.com/B_USERNAME/B_ORIGINAL</div><div class="line"> * [new branch]      master     -&gt; upstream/master</div></pre></td></tr></table></figure>
+<ol>
+<li>B repository 의 master branch (혹은 원하는 branch) 로부터 나의 local master branch 로 merge 한다.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ git checkout master</div><div class="line">Switched to branch <span class="string">'master'</span></div><div class="line"></div><div class="line">$ git merge upstream/master</div><div class="line">Updating a422352..5fdff0f</div><div class="line">Fast-forward</div><div class="line"> README                    |    9 -------</div><div class="line"> README.md                 |    7 ++++++</div><div class="line"> 2 files changed, 7 insertions(+), 9 deletions(-)</div><div class="line"> delete mode 100644 README</div><div class="line"> create mode 100644 README.md</div></pre></td></tr></table></figure>
+<ol>
+<li>5번은 내 local repository 에서 일어난 것이므로 push 를 통해 remote repository 에도 적용시켜주면 완료!</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
+<p>참고 : <a href="https://json.postype.com/post/210431" target="_blank" rel="external">https://json.postype.com/post/210431</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/git/">git</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/git/">git</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="https://seultt.github.io/2018/01/14/git-repo-update/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:seultt.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/React/">React</a><small>2</small></li>
+  
+    <li><a href="/categories/TIL/">TIL</a><small>1</small></li>
+  
+    <li><a href="/categories/Today-I-Learn/">Today I Learn</a><small>3</small></li>
+  
+    <li><a href="/categories/TypeScript/">TypeScript</a><small>1</small></li>
+  
+    <li><a href="/categories/git/">git</a><small>1</small></li>
+  
+    <li><a href="/categories/아무거나/">아무거나</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>1</small></li>
+  
+    <li><a href="/tags/React/">React</a><small>3</small></li>
+  
+    <li><a href="/tags/TIL/">TIL</a><small>1</small></li>
+  
+    <li><a href="/tags/TypeScript/">TypeScript</a><small>1</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/undefined/">undefined</a><small>1</small></li>
+  
+    <li><a href="/tags/unitTest/">unitTest</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 seultt
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
