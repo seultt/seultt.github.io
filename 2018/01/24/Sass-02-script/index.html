@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Sass-02-script | seultt</title>
+  <meta name="author" content="seultt">
+  
+  <meta name="description" content="Sass0. CommentSass의 주석이 CSS와 다른점 한 줄 주석을 달 수 있다!
+Sass12// You can&#39;t see comment/* You can see comment */
+1. Data Type
+숫자형
+
+문자열
+
+컬러
+
+boolean
+null
+listm">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Sass-02-script"/>
+  <meta property="og:site_name" content="seultt"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="seultt" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">seultt</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-01-23T21:57:26.000Z"><a href="/2018/01/24/Sass-02-script/">2018-01-24</a></time>
+      
+      
+  
+    <h1 class="title">Sass-02-script</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Sass"><a href="#Sass" class="headerlink" title="Sass"></a>Sass</h1><h2 id="0-Comment"><a href="#0-Comment" class="headerlink" title="0. Comment"></a>0. Comment</h2><p>Sass의 주석이 CSS와 다른점 한 줄 주석을 달 수 있다!</p>
+<p><strong>Sass</strong><br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// You can't see comment</span></div><div class="line"><span class="comment">/* You can see comment */</span></div></pre></td></tr></table></figure></p>
+<h2 id="1-Data-Type"><a href="#1-Data-Type" class="headerlink" title="1. Data Type"></a>1. Data Type</h2><ul>
+<li><p>숫자형</p>
+</li>
+<li><p>문자열</p>
+</li>
+<li><p>컬러</p>
+</li>
+<li>boolean</li>
+<li>null</li>
+<li>list<br>margin과 padding 프로퍼티값 지정에 사용되는 0 auto와 font-family 프로퍼티값 지정에 사용되는 Helvetica, Arial, sans-serif 등은 공백 또는 콤마 구분된 값의 list이다. e.g. 1.5em 1em 0 2em, Helvetica, Arial, sans-serif</li>
+<li>map<br>JSON과 유사한 방식으로 map-get 함수를 사용하여 원하는 값은 추출할 수 있다. e.g. (key1: value1, key2: value2)</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// map</span></div><div class="line"><span class="variable">$foundation-palette</span>: (</div><div class="line">  primary: <span class="number">#E44347</span>,</div><div class="line">  mars: <span class="number">#D7525C</span>,</div><div class="line">  saturn: <span class="number">#E4B884</span>,</div><div class="line">  neptune: <span class="number">#5147D7</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="selector-class">.mars</span> &#123;</div><div class="line">  <span class="attribute">color</span>: map-get(<span class="variable">$foundation-palette</span>, mars);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// =&gt; .mars &#123; color: #D7525C; &#125;</span></div></pre></td></tr></table></figure>
+<h2 id="2-선택자-내포Nesting"><a href="#2-선택자-내포Nesting" class="headerlink" title="2. 선택자 내포Nesting"></a>2. 선택자 내포Nesting</h2><p>Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용되고 있는 것 하나는 선택자 내포<br>선택자 내포는 짧은 선택자들을 서로 포개어 넣음으로써 긴 선택자를 산출해 내는 방식을 제안</p>
+<p>예로, 아래의 Sass는:<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.foo</span> &#123;</div><div class="line">  <span class="selector-class">.bar</span> &#123;</div><div class="line">    &amp;:hover &#123;</div><div class="line">      <span class="attribute">color</span>: red;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>… 이런 CSS를 만들어냅니다:<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.foo</span> <span class="selector-class">.bar</span>:hover &#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>꼭 지켜야하는 규칙!!</strong><br>코드블럭이 4단계 이상 늘어나지 않게 조정!!<br>Sass로 협업할 때 Code Convention 을 만들어 주면 좋다! </p>
+</blockquote>
+<h2 id="3-변수"><a href="#3-변수" class="headerlink" title="3. 변수"></a>3. 변수</h2><p>변수명은 $로 시작</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$site_max_width</span>: <span class="number">960px</span>;</div><div class="line"><span class="variable">$font_color</span>: <span class="number">#333</span>;</div><div class="line"><span class="variable">$link_color</span>: <span class="number">#00c</span>;</div><div class="line"><span class="variable">$font_family</span>: Arial, sans-serif;</div><div class="line"><span class="variable">$font_size</span>: <span class="number">16px</span>;</div><div class="line"><span class="variable">$line_height</span>: percentage(<span class="number">20px</span> / <span class="variable">$font_size</span>);</div><div class="line"></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="variable">$font_color</span>;</div><div class="line"></div><div class="line">  <span class="comment">// Property Nesting</span></div><div class="line">  <span class="attribute">font</span>: &#123;</div><div class="line">    size: <span class="variable">$font_size</span>;</div><div class="line">    family: <span class="variable">$font_family</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="attribute">line-height</span>: <span class="variable">$line_height</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#main</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">max-width</span>: <span class="variable">$site_max_width</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="변수의-Scope"><a href="#변수의-Scope" class="headerlink" title="변수의 Scope"></a>변수의 Scope</h2><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$width</span>: <span class="number">960px</span>; <span class="comment">// global variable</span></div><div class="line"></div><div class="line"><span class="selector-tag">header</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#main</span> &#123;</div><div class="line">  <span class="variable">$color</span>: <span class="number">#333</span>; <span class="comment">// local variable</span></div><div class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</div><div class="line">  <span class="selector-tag">section</span> &#123;</div><div class="line">    <span class="selector-tag">p</span> &#123;</div><div class="line">      <span class="attribute">color</span>: <span class="variable">$color</span>;</div><div class="line"></div><div class="line">      <span class="selector-tag">a</span>:link &#123;</div><div class="line">        <span class="attribute">color</span>: <span class="variable">$color</span>;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">footer</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">  <span class="attribute">color</span>: <span class="variable">$color</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Today-I-Learn/">Today I Learn</a>
+  </div>
+
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="https://seultt.github.io/2018/01/24/Sass-02-script/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:seultt.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/React/">React</a><small>2</small></li>
+  
+    <li><a href="/categories/TIL/">TIL</a><small>1</small></li>
+  
+    <li><a href="/categories/Today-I-Learn/">Today I Learn</a><small>5</small></li>
+  
+    <li><a href="/categories/TypeScript/">TypeScript</a><small>1</small></li>
+  
+    <li><a href="/categories/git/">git</a><small>1</small></li>
+  
+    <li><a href="/categories/아무거나/">아무거나</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>1</small></li>
+  
+    <li><a href="/tags/React/">React</a><small>3</small></li>
+  
+    <li><a href="/tags/Sass-scss/">Sass scss</a><small>1</small></li>
+  
+    <li><a href="/tags/TIL/">TIL</a><small>1</small></li>
+  
+    <li><a href="/tags/TypeScript/">TypeScript</a><small>1</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/undefined/">undefined</a><small>1</small></li>
+  
+    <li><a href="/tags/unitTest/">unitTest</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 seultt
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

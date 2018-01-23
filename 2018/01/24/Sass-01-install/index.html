@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Sass-01-install | seultt</title>
+  <meta name="author" content="seultt">
+  
+  <meta name="description" content="Node-Sass
+Ruby Sass 보다 빠르다!!, Ruby 를 설치 하지 않아도 된다.
+요즘은 Ruby Sass 와 성능이 크게 차이 나지 않는다.
+
+환경 설정
+Node.js 버전 6.5.0 이상
+npm —v node -v 버전 확인
+nvm ls(https://no">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Sass-01-install"/>
+  <meta property="og:site_name" content="seultt"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="seultt" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">seultt</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-01-23T21:55:26.000Z"><a href="/2018/01/24/Sass-01-install/">2018-01-24</a></time>
+      
+      
+  
+    <h1 class="title">Sass-01-install</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Node-Sass"><a href="#Node-Sass" class="headerlink" title="Node-Sass"></a>Node-Sass</h1><ul>
+<li>Ruby Sass 보다 빠르다!!, Ruby 를 설치 하지 않아도 된다.</li>
+<li>요즘은 Ruby Sass 와 성능이 크게 차이 나지 않는다.</li>
+</ul>
+<h2 id="환경-설정"><a href="#환경-설정" class="headerlink" title="환경 설정"></a>환경 설정</h2><ul>
+<li>Node.js 버전 6.5.0 이상</li>
+<li><code>npm —v</code> <code>node -v</code> 버전 확인</li>
+<li><code>nvm ls</code><br>(<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a>)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 컴퓨터 전역 설치</span></div><div class="line">$ npm install -g node-sass </div><div class="line"><span class="comment"># 프로젝트 로컬 설치</span></div><div class="line">$ npm install node-sass</div><div class="line">$ npm show node-sass versons</div><div class="line">$ npm show node-sass@4.* version</div></pre></td></tr></table></figure>
+<h1 id="CLI-Compile"><a href="#CLI-Compile" class="headerlink" title="CLI Compile"></a>CLI Compile</h1><p>컴파일할 SCSS 파일의 경로와 컴파일 후 생성될 css 파일의 경로를 지정한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 특정 파일을 특정 파일 이름으로 컴파일</span></div><div class="line">$ node-sass foo.scss &gt; bar.css</div><div class="line"><span class="comment">## node-sass input-folder-path -o output-folder-path</span></div><div class="line">$ node-sass src/sass --output dist/css</div></pre></td></tr></table></figure>
+<h2 id="Compile-Style"><a href="#Compile-Style" class="headerlink" title="Compile Style"></a>Compile Style</h2><p>scss 파일을 컴파일하여 css 파일을 생성할 때 4가지 스타일 중 하나를 선택할 수 있다.</p>
+<hr>
+<ul>
+<li><h2 id="nested"><a href="#nested" class="headerlink" title="nested"></a>nested</h2><p>sass 형식과 유사하게 nested된 css 파일이 생성된다. 기본값으로 옵션을 추가하지 않아도 기본 적용된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node-sass --output-style nested src/ --output dist/</div></pre></td></tr></table></figure>
+<hr>
+</li>
+<li><h2 id="expanded"><a href="#expanded" class="headerlink" title="expanded"></a>expanded</h2><p>표준적인 스타일의 css 파일이 생성된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node-sass --output-style expanded src --output dist</div></pre></td></tr></table></figure>
+<hr>
+</li>
+<li><h2 id="compact"><a href="#compact" class="headerlink" title="compact"></a>compact</h2><p>여러 룰셋을 한줄로 나타내는 스타일의 css 파일이 생성된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node-sass --output-style compact src --output dist</div></pre></td></tr></table></figure>
+<hr>
+</li>
+<li><h2 id="compressed"><a href="#compressed" class="headerlink" title="compressed"></a>compressed</h2><p>가능한 빈공간이 없는 압축된 스타일의 css 파일이 생성된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node-sass --output-style compressed src --output dist</div></pre></td></tr></table></figure>
+<hr>
+</li>
+</ul>
+<h2 id="Watch"><a href="#Watch" class="headerlink" title="Watch"></a>Watch</h2><p>watch command는 scss 파일의 변경을 감지하여 변경될 때마다 scss 파일을 컴파일하여 css 파일을 자동 업데이트한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line"></div><div class="line"><span class="comment">## watch src/sass/foo.scss -&gt; dist/css</span></div><div class="line">$ node-sass --watch src/ --output  dist/</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Today-I-Learn/">Today I Learn</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Sass-scss/">Sass scss</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="https://seultt.github.io/2018/01/24/Sass-01-install/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:seultt.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/React/">React</a><small>2</small></li>
+  
+    <li><a href="/categories/TIL/">TIL</a><small>1</small></li>
+  
+    <li><a href="/categories/Today-I-Learn/">Today I Learn</a><small>5</small></li>
+  
+    <li><a href="/categories/TypeScript/">TypeScript</a><small>1</small></li>
+  
+    <li><a href="/categories/git/">git</a><small>1</small></li>
+  
+    <li><a href="/categories/아무거나/">아무거나</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>1</small></li>
+  
+    <li><a href="/tags/React/">React</a><small>3</small></li>
+  
+    <li><a href="/tags/Sass-scss/">Sass scss</a><small>1</small></li>
+  
+    <li><a href="/tags/TIL/">TIL</a><small>1</small></li>
+  
+    <li><a href="/tags/TypeScript/">TypeScript</a><small>1</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/undefined/">undefined</a><small>1</small></li>
+  
+    <li><a href="/tags/unitTest/">unitTest</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 seultt
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

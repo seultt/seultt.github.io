@@ -50,6 +50,128 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2018-01-23T21:57:26.000Z"><a href="/2018/01/24/Sass-02-script/">2018-01-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/01/24/Sass-02-script/">Sass-02-script</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Sass"><a href="#Sass" class="headerlink" title="Sass"></a>Sass</h1><h2 id="0-Comment"><a href="#0-Comment" class="headerlink" title="0. Comment"></a>0. Comment</h2><p>Sass의 주석이 CSS와 다른점 한 줄 주석을 달 수 있다!</p>
+<p><strong>Sass</strong><br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// You can't see comment</span></div><div class="line"><span class="comment">/* You can see comment */</span></div></pre></td></tr></table></figure></p>
+<h2 id="1-Data-Type"><a href="#1-Data-Type" class="headerlink" title="1. Data Type"></a>1. Data Type</h2><ul>
+<li><p>숫자형</p>
+</li>
+<li><p>문자열</p>
+</li>
+<li><p>컬러</p>
+</li>
+<li>boolean</li>
+<li>null</li>
+<li>list<br>margin과 padding 프로퍼티값 지정에 사용되는 0 auto와 font-family 프로퍼티값 지정에 사용되는 Helvetica, Arial, sans-serif 등은 공백 또는 콤마 구분된 값의 list이다. e.g. 1.5em 1em 0 2em, Helvetica, Arial, sans-serif</li>
+<li>map<br>JSON과 유사한 방식으로 map-get 함수를 사용하여 원하는 값은 추출할 수 있다. e.g. (key1: value1, key2: value2)</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// map</span></div><div class="line"><span class="variable">$foundation-palette</span>: (</div><div class="line">  primary: <span class="number">#E44347</span>,</div><div class="line">  mars: <span class="number">#D7525C</span>,</div><div class="line">  saturn: <span class="number">#E4B884</span>,</div><div class="line">  neptune: <span class="number">#5147D7</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="selector-class">.mars</span> &#123;</div><div class="line">  <span class="attribute">color</span>: map-get(<span class="variable">$foundation-palette</span>, mars);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// =&gt; .mars &#123; color: #D7525C; &#125;</span></div></pre></td></tr></table></figure>
+<h2 id="2-선택자-내포Nesting"><a href="#2-선택자-내포Nesting" class="headerlink" title="2. 선택자 내포Nesting"></a>2. 선택자 내포Nesting</h2><p>Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용되고 있는 것 하나는 선택자 내포<br>선택자 내포는 짧은 선택자들을 서로 포개어 넣음으로써 긴 선택자를 산출해 내는 방식을 제안</p>
+<p>예로, 아래의 Sass는:<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.foo</span> &#123;</div><div class="line">  <span class="selector-class">.bar</span> &#123;</div><div class="line">    &amp;:hover &#123;</div><div class="line">      <span class="attribute">color</span>: red;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>… 이런 CSS를 만들어냅니다:<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.foo</span> <span class="selector-class">.bar</span>:hover &#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>꼭 지켜야하는 규칙!!</strong><br>코드블럭이 4단계 이상 늘어나지 않게 조정!!<br>Sass로 협업할 때 Code Convention 을 만들어 주면 좋다! </p>
+</blockquote>
+<h2 id="3-변수"><a href="#3-변수" class="headerlink" title="3. 변수"></a>3. 변수</h2><p>변수명은 $로 시작</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$site_max_width</span>: <span class="number">960px</span>;</div><div class="line"><span class="variable">$font_color</span>: <span class="number">#333</span>;</div><div class="line"><span class="variable">$link_color</span>: <span class="number">#00c</span>;</div><div class="line"><span class="variable">$font_family</span>: Arial, sans-serif;</div><div class="line"><span class="variable">$font_size</span>: <span class="number">16px</span>;</div><div class="line"><span class="variable">$line_height</span>: percentage(<span class="number">20px</span> / <span class="variable">$font_size</span>);</div><div class="line"></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="variable">$font_color</span>;</div><div class="line"></div><div class="line">  <span class="comment">// Property Nesting</span></div><div class="line">  <span class="attribute">font</span>: &#123;</div><div class="line">    size: <span class="variable">$font_size</span>;</div><div class="line">    family: <span class="variable">$font_family</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="attribute">line-height</span>: <span class="variable">$line_height</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#main</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">max-width</span>: <span class="variable">$site_max_width</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="변수의-Scope"><a href="#변수의-Scope" class="headerlink" title="변수의 Scope"></a>변수의 Scope</h2><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$width</span>: <span class="number">960px</span>; <span class="comment">// global variable</span></div><div class="line"></div><div class="line"><span class="selector-tag">header</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#main</span> &#123;</div><div class="line">  <span class="variable">$color</span>: <span class="number">#333</span>; <span class="comment">// local variable</span></div><div class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</div><div class="line">  <span class="selector-tag">section</span> &#123;</div><div class="line">    <span class="selector-tag">p</span> &#123;</div><div class="line">      <span class="attribute">color</span>: <span class="variable">$color</span>;</div><div class="line"></div><div class="line">      <span class="selector-tag">a</span>:link &#123;</div><div class="line">        <span class="attribute">color</span>: <span class="variable">$color</span>;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">footer</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">  <span class="attribute">color</span>: <span class="variable">$color</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-01-23T21:55:26.000Z"><a href="/2018/01/24/Sass-01-install/">2018-01-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/01/24/Sass-01-install/">Sass-01-install</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Node-Sass"><a href="#Node-Sass" class="headerlink" title="Node-Sass"></a>Node-Sass</h1><ul>
+<li>Ruby Sass 보다 빠르다!!, Ruby 를 설치 하지 않아도 된다.</li>
+<li>요즘은 Ruby Sass 와 성능이 크게 차이 나지 않는다.</li>
+</ul>
+<h2 id="환경-설정"><a href="#환경-설정" class="headerlink" title="환경 설정"></a>환경 설정</h2><ul>
+<li>Node.js 버전 6.5.0 이상</li>
+<li><code>npm —v</code> <code>node -v</code> 버전 확인</li>
+<li><code>nvm ls</code><br>(<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a>)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 컴퓨터 전역 설치</span></div><div class="line">$ npm install -g node-sass </div><div class="line"><span class="comment"># 프로젝트 로컬 설치</span></div><div class="line">$ npm install node-sass</div><div class="line">$ npm show node-sass versons</div><div class="line">$ npm show node-sass@4.* version</div></pre></td></tr></table></figure>
+<h1 id="CLI-Compile"><a href="#CLI-Compile" class="headerlink" title="CLI Compile"></a>CLI Compile</h1><p>컴파일할 SCSS 파일의 경로와 컴파일 후 생성될 css 파일의 경로를 지정한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 특정 파일을 특정 파일 이름으로 컴파일</span></div><div class="line">$ node-sass foo.scss &gt; bar.css</div><div class="line"><span class="comment">## node-sass input-folder-path -o output-folder-path</span></div><div class="line">$ node-sass src/sass --output dist/css</div></pre></td></tr></table></figure>
+<h2 id="Compile-Style"><a href="#Compile-Style" class="headerlink" title="Compile Style"></a>Compile Style</h2><p>scss 파일을 컴파일하여 css 파일을 생성할 때 4가지 스타일 중 하나를 선택할 수 있다.</p>
+<hr>
+<ul>
+<li><h2 id="nested"><a href="#nested" class="headerlink" title="nested"></a>nested</h2><p>sass 형식과 유사하게 nested된 css 파일이 생성된다. 기본값으로 옵션을 추가하지 않아도 기본 적용된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node-sass --output-style nested src/ --output dist/</div></pre></td></tr></table></figure>
+<hr>
+</li>
+<li><h2 id="expanded"><a href="#expanded" class="headerlink" title="expanded"></a>expanded</h2><p>표준적인 스타일의 css 파일이 생성된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node-sass --output-style expanded src --output dist</div></pre></td></tr></table></figure>
+<hr>
+</li>
+<li><h2 id="compact"><a href="#compact" class="headerlink" title="compact"></a>compact</h2><p>여러 룰셋을 한줄로 나타내는 스타일의 css 파일이 생성된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node-sass --output-style compact src --output dist</div></pre></td></tr></table></figure>
+<hr>
+</li>
+<li><h2 id="compressed"><a href="#compressed" class="headerlink" title="compressed"></a>compressed</h2><p>가능한 빈공간이 없는 압축된 스타일의 css 파일이 생성된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node-sass --output-style compressed src --output dist</div></pre></td></tr></table></figure>
+<hr>
+</li>
+</ul>
+<h2 id="Watch"><a href="#Watch" class="headerlink" title="Watch"></a>Watch</h2><p>watch command는 scss 파일의 변경을 감지하여 변경될 때마다 scss 파일을 컴파일하여 css 파일을 자동 업데이트한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line"></div><div class="line"><span class="comment">## watch src/sass/foo.scss -&gt; dist/css</span></div><div class="line">$ node-sass --watch src/ --output  dist/</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2018-01-14T14:53:48.000Z"><a href="/2018/01/14/git-repo-update/">2018-01-14</a></time>
       
       
@@ -774,73 +896,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-11-08T09:59:05.000Z"><a href="/2017/11/08/React-Angular/">2017-11-08</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2017/11/08/React-Angular/">React / Angular</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="React의-장점"><a href="#React의-장점" class="headerlink" title="React의 장점"></a>React의 장점</h2><p>React는 Facebook 에서 성능 좋은 유저 인터페이스를 구현하는 목표로 만들어진 JavaScript 웹 프레임워크입니다.</p>
-<p>브라우저 내에 DOM 변화가 일어 나면, 브라우저가 HTML / CSS 를 다시 연산, 레이아웃을 구성하고 웹페이지를 리랜더링하는 이 과정에서 시간이 많이 소요되는데 <strong>React</strong>는 Virtual DOM 을 사용하여 React 내에서 데이터가 변하면 브라우저상의 실제 DOM 에 적용 된다는 장점이 있습니다.</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-11-06T08:11:54.000Z"><a href="/2017/11/06/yaho/">2017-11-06</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2017/11/06/yaho/">yaho</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>첫 글입니다!!</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -866,7 +921,7 @@
   
     <li><a href="/categories/TIL/">TIL</a><small>1</small></li>
   
-    <li><a href="/categories/Today-I-Learn/">Today I Learn</a><small>3</small></li>
+    <li><a href="/categories/Today-I-Learn/">Today I Learn</a><small>5</small></li>
   
     <li><a href="/categories/TypeScript/">TypeScript</a><small>1</small></li>
   
@@ -886,6 +941,8 @@
     <li><a href="/tags/JavaScript/">JavaScript</a><small>1</small></li>
   
     <li><a href="/tags/React/">React</a><small>3</small></li>
+  
+    <li><a href="/tags/Sass-scss/">Sass scss</a><small>1</small></li>
   
     <li><a href="/tags/TIL/">TIL</a><small>1</small></li>
   
