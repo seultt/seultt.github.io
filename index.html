@@ -50,6 +50,63 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2018-02-14T14:16:42.000Z"><a href="/2018/02/14/TIL-180214-md/">2018-02-14</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/02/14/TIL-180214-md/">TIL_180214</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="오늘-할-일"><a href="#오늘-할-일" class="headerlink" title="오늘 할 일"></a>오늘 할 일</h1><ul>
+<li><del>기초 수학공부</del><ul>
+<li>분수</li>
+</ul>
+</li>
+<li><del>Functional JavaScript [마이클 포거스]</del><ul>
+<li>함수형 프로그래밍이 중요한 이유</li>
+<li>일급 함수의 특징</li>
+</ul>
+</li>
+<li>SICP  연휴 기간동안 다시 처음부터 복습<ul>
+<li><del>1.1.1 엮은식(combination)을 계산하는 방법</del></li>
+</ul>
+</li>
+</ul>
+<h1 id="오늘-한-일과-느낀-점"><a href="#오늘-한-일과-느낀-점" class="headerlink" title="오늘 한 일과 느낀 점"></a>오늘 한 일과 느낀 점</h1><ul>
+<li>Functional JavaScript<br>마이클 포거스 책으로 함수형 프로그래밍을 공부하는데 이해가 안가는 부분이 있다. 특히 underscore.js 와 관련된 코드를 볼 때 시간이 많이 지체 된다. 이번 설에는 이 책을 정독하는 것이 아니라 전체적인 흐름을 보고 코드가 눈에 익을 수 있도록 빨리 읽는 것을 목표로 삼아야겠다.</li>
+<li>SICP<br>다음 SICP 스터디에 지장이 없도록 설 연휴에 복습을 많이 해놓아야겠다. 프로시저와 프로세스, 되도는 프로세스와 반복하는 프로세스의 개념이 아직도 헷갈리므로 조만간 블로그에 정리하도록 해야겠다. </li>
+<li>기초 수학공부<br>함수형 프로그래밍을 위해 기본 수학 개념을 알아야한다고 해서 (해든님께서 주신 책을 가지고) 이번 주 부터 문제를 풀었는데 은근 많이 틀렸다. 계속 꾸준하게 공부하도록 해야겠다.</li>
+</ul>
+<h1 id="내일-할-일"><a href="#내일-할-일" class="headerlink" title="내일 할 일"></a>내일 할 일</h1><ul>
+<li>기초 수학 공부</li>
+<li>Functional JavaScript - 고차원 함수</li>
+<li>SICP</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2018-01-23T21:57:26.000Z"><a href="/2018/01/24/Sass-02-script/">2018-01-24</a></time>
       
       
@@ -854,48 +911,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-11-15T07:14:51.000Z"><a href="/2017/11/15/React-JSX/">2017-11-15</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2017/11/15/React-JSX/">React-JSX</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1 id="React-JSX"><a href="#React-JSX" class="headerlink" title="React JSX"></a>React JSX</h1><p>React.js는 일반 JavaScript문법이 아닌 JSX 문법을 사용하여 UI 템플릿화 한다.<br>JSX를 사용하는 것은 필수가 아니지만 이를 사용하면 다음과 같은 장점이 있다.</p>
-<ul>
-<li>JSX는 컴파일링 되면서 최적화 되므로 빠르다.</li>
-<li>Type-safe 이며 컴파일링 과정에서 에러를 감지 할 수 있다.</li>
-<li>HTML에 익숙하다면, JSX를 사용하여 더 쉽고 빠르게 템플릿을 작성 할 수 있다.</li>
-</ul>
-<h2 id="If-Else-문-사용-불가"><a href="#If-Else-문-사용-불가" class="headerlink" title="If-Else 문 사용 불가"></a>If-Else 문 사용 불가</h2><p>JSX 안에서 사용되는 JavaScript 표현에는ㄴ IF-Else 문이 사용이 안된다. </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ternary(condition ? <span class="literal">true</span> : <span class="literal">false</span>)</div><div class="line"></div><div class="line"><span class="comment">// example</span></div><div class="line">&lt;p&gt;&#123;<span class="number">1</span> == <span class="number">1</span> ? <span class="string">'True'</span> : <span class="string">'False'</span>&#125;&lt;<span class="regexp">/p&gt;</span></div></pre></td></tr></table></figure>
-<p>위와 같이 사용해야함</p>
-<h2 id="Inline-Style"><a href="#Inline-Style" class="headerlink" title="Inline Style"></a>Inline Style</h2><p>React의 Inline Style에서는, string 형식이 사용되지않고 key가 camelCase인 Object가 사용된다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">render() &#123;</div><div class="line">  <span class="keyword">let</span> text = <span class="string">"seultt"</span>;</div><div class="line">  <span class="keyword">let</span> pStyle = &#123;</div><div class="line">    color: <span class="string">'aqua'</span>,</div><div class="line">    backgroundColor: <span class="string">'black'</span></div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">return</span> (</div><div class="line">    &lt;div&gt;</div><div class="line">      &lt;h1&gt; Hello World &lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">      &lt;h2&gt;Welcom to &#123;text&#125; &lt;/</span>h2&gt;</div><div class="line">      &lt;p style = &#123;pStyle&#125;&gt;&#123;<span class="number">1</span> == <span class="number">1</span> ? <span class="string">'True'</span> : <span class="string">'False'</span> &#125;&lt;<span class="regexp">/p&gt;</span></div><div class="line"><span class="regexp">    &lt;/</span>div&gt;</div><div class="line">  );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -919,9 +934,7 @@
   
     <li><a href="/categories/React/">React</a><small>2</small></li>
   
-    <li><a href="/categories/TIL/">TIL</a><small>1</small></li>
-  
-    <li><a href="/categories/Today-I-Learn/">Today I Learn</a><small>5</small></li>
+    <li><a href="/categories/TIL/">TIL</a><small>7</small></li>
   
     <li><a href="/categories/TypeScript/">TypeScript</a><small>1</small></li>
   

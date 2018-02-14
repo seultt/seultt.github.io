@@ -50,6 +50,48 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-11-15T07:14:51.000Z"><a href="/2017/11/15/React-JSX/">2017-11-15</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/11/15/React-JSX/">React-JSX</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="React-JSX"><a href="#React-JSX" class="headerlink" title="React JSX"></a>React JSX</h1><p>React.js는 일반 JavaScript문법이 아닌 JSX 문법을 사용하여 UI 템플릿화 한다.<br>JSX를 사용하는 것은 필수가 아니지만 이를 사용하면 다음과 같은 장점이 있다.</p>
+<ul>
+<li>JSX는 컴파일링 되면서 최적화 되므로 빠르다.</li>
+<li>Type-safe 이며 컴파일링 과정에서 에러를 감지 할 수 있다.</li>
+<li>HTML에 익숙하다면, JSX를 사용하여 더 쉽고 빠르게 템플릿을 작성 할 수 있다.</li>
+</ul>
+<h2 id="If-Else-문-사용-불가"><a href="#If-Else-문-사용-불가" class="headerlink" title="If-Else 문 사용 불가"></a>If-Else 문 사용 불가</h2><p>JSX 안에서 사용되는 JavaScript 표현에는ㄴ IF-Else 문이 사용이 안된다. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ternary(condition ? <span class="literal">true</span> : <span class="literal">false</span>)</div><div class="line"></div><div class="line"><span class="comment">// example</span></div><div class="line">&lt;p&gt;&#123;<span class="number">1</span> == <span class="number">1</span> ? <span class="string">'True'</span> : <span class="string">'False'</span>&#125;&lt;<span class="regexp">/p&gt;</span></div></pre></td></tr></table></figure>
+<p>위와 같이 사용해야함</p>
+<h2 id="Inline-Style"><a href="#Inline-Style" class="headerlink" title="Inline Style"></a>Inline Style</h2><p>React의 Inline Style에서는, string 형식이 사용되지않고 key가 camelCase인 Object가 사용된다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">render() &#123;</div><div class="line">  <span class="keyword">let</span> text = <span class="string">"seultt"</span>;</div><div class="line">  <span class="keyword">let</span> pStyle = &#123;</div><div class="line">    color: <span class="string">'aqua'</span>,</div><div class="line">    backgroundColor: <span class="string">'black'</span></div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">return</span> (</div><div class="line">    &lt;div&gt;</div><div class="line">      &lt;h1&gt; Hello World &lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">      &lt;h2&gt;Welcom to &#123;text&#125; &lt;/</span>h2&gt;</div><div class="line">      &lt;p style = &#123;pStyle&#125;&gt;&#123;<span class="number">1</span> == <span class="number">1</span> ? <span class="string">'True'</span> : <span class="string">'False'</span> &#125;&lt;<span class="regexp">/p&gt;</span></div><div class="line"><span class="regexp">    &lt;/</span>div&gt;</div><div class="line">  );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-11-08T09:59:05.000Z"><a href="/2017/11/08/React-Angular/">2017-11-08</a></time>
       
       
@@ -175,9 +217,7 @@
   
     <li><a href="/categories/React/">React</a><small>2</small></li>
   
-    <li><a href="/categories/TIL/">TIL</a><small>1</small></li>
-  
-    <li><a href="/categories/Today-I-Learn/">Today I Learn</a><small>5</small></li>
+    <li><a href="/categories/TIL/">TIL</a><small>7</small></li>
   
     <li><a href="/categories/TypeScript/">TypeScript</a><small>1</small></li>
   
