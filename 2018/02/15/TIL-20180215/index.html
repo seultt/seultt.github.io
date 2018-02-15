@@ -3,13 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tags | seultt</title>
+  <title>TIL_20180215 | seultt</title>
   <meta name="author" content="seultt">
+  
+  <meta name="description" content="오늘 할 일
+기초 수학공부
+함수형 자바스크립트
+SICP
+
+오늘 공부하면서 느낀 점
+3.3.1 자바스크립트의 동적 스코프 부분에서 
+12345678910function globalThis() &amp;#123; return this; &amp;#125;globalThis();// =&amp;">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Tags"/>
+  <meta property="og:title" content="TIL_20180215"/>
   <meta property="og:site_name" content="seultt"/>
 
   
@@ -43,28 +52,51 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="tags">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
       
         <div class="icon"></div>
-        <time datetime="2017-11-07T07:53:13.434Z"><a href="/tags/index.html">2017-11-07</a></time>
+        <time datetime="2018-02-15T07:03:28.000Z"><a href="/2018/02/15/TIL-20180215/">2018-02-15</a></time>
       
       
   
-    <h1 class="title">Tags</h1>
+    <h1 class="title">TIL_20180215</h1>
   
 
     </header>
     <div class="entry">
       
-        
+        <h1 id="오늘-할-일"><a href="#오늘-할-일" class="headerlink" title="오늘 할 일"></a>오늘 할 일</h1><ul>
+<li><del>기초 수학공부</del></li>
+<li><del>함수형 자바스크립트</del></li>
+<li>SICP</li>
+</ul>
+<h1 id="오늘-공부하면서-느낀-점"><a href="#오늘-공부하면서-느낀-점" class="headerlink" title="오늘 공부하면서 느낀 점"></a>오늘 공부하면서 느낀 점</h1><ul>
+<li><p>3.3.1 <strong>자바스크립트의 동적 스코프</strong> 부분에서 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">globalThis</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="keyword">this</span>; &#125;</div><div class="line"></div><div class="line">globalThis();</div><div class="line"><span class="comment">// =&gt; Window 같은 어떤 전역 객체</span></div><div class="line"></div><div class="line">globalThis.call(<span class="string">'barnabas'</span>);</div><div class="line"><span class="comment">// =&gt; 'barnabas'</span></div><div class="line"></div><div class="line">globalThis.apply(<span class="string">'orsulak'</span>);</div><div class="line"><span class="comment">// =&gt; 'orsulak'</span></div></pre></td></tr></table></figure>
+<p>다행히 this 레퍼런스를 call 이나 apply 로 넘겨주지 않았거나 null로 바인딩했다면 동적 스코프와 혼동이 발생하지 않는다.</p>
+<p>라고 나와 있는데 null을 바인딩한다면… 코드가 머리에 그려지지 않는다. 내일 이 부분을 한 번 더 읽어 봐야 겠다.<br>그리고 call 과 apply 의 실행컨텍스트 this 바인딩과 스코프 체이닝에 대해서도 좀 더 자세히 찾아 봐야겠다.</p>
+</li>
+</ul>
+<ul>
+<li>3.3 동적 스코프의 예제에서 makeBindFunc 함수 예제를 봤을 때 이해가 되지 않았는데 차분히 읽으면서 머리 속으로 컴파일 해 나가는 재미가 있었다.<br>내일은 직접 타이핑 하면서 다양하게 시도해봐야겠다.</li>
+</ul>
+<ul>
+<li>오전, 오후를 동계 올림픽 보느라 오늘은 계획 했던 만큼 공부를 하지 못했다. 내일은 설날이므로 이동 시간을 이용해서 시간분배를 잘 해야겠다.</li>
+</ul>
+
       
     </div>
     <footer>
       
         
+  
+  <div class="categories">
+    <a href="/categories/TIL/">TIL</a>
+  </div>
+
         
         
   <div class="addthis addthis_toolbox addthis_default_style">
@@ -106,7 +138,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="https://seultt.github.io/tags/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="https://seultt.github.io/2018/02/15/TIL-20180215/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>

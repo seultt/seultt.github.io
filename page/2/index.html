@@ -50,6 +50,72 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-11-15T07:17:11.000Z"><a href="/2017/11/15/DataType/">2017-11-15</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/11/15/DataType/">DataType</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="JavaScript-Data-Type"><a href="#JavaScript-Data-Type" class="headerlink" title="JavaScript Data Type"></a>JavaScript Data Type</h1><h2 id="기본-데이터-타입"><a href="#기본-데이터-타입" class="headerlink" title="기본 데이터 타입"></a>기본 데이터 타입</h2><ul>
+<li><p>한번 생성된 기본 타입은 read Only 로서 수정은 불가능하다. (immutable)</p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>undefined</li>
+<li>null</li>
+<li>Boolean</li>
+<li>Symbol</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello'</span>;</div><div class="line">str = <span class="string">'world'</span>;</div></pre></td></tr></table></figure>
+<p>첫번째 구문이 실행되면 메모리에 ‘Hello’ 생성, 식별자 str은 메모리에 생성된 문자열 ‘Hello’의 메모리 주소를 가리킨다.</p>
+<p>두번째 구문이 실행되면 이전에 생성된 문자열 ‘Hello’을 수정하는 것이 아닌 새로운 문자열 ‘world’를 메모리에 생성하고 식별자 str은 이것을 가리킨다.</p>
+<p>이때 문자열 ‘Hello’와  ‘world’는 모두 메모리에 존재하고 있다.</p>
+<h3 id="1-String"><a href="#1-String" class="headerlink" title="1.String"></a>1.String</h3><p>문자열은 배열처럼 인덱스를 통해 접근할 수 있다 이를 유사 배열이라 한다.</p>
+<p>문자열은 기본 자료형으로 수정은 불가능하지만 새로운 할당은 가능하다. 이는 기존 문자열을 수정하는 것이 아닌 새로운 문자열을 할당하는 것이기 때문이다.</p>
+<h3 id="2-Number"><a href="#2-Number" class="headerlink" title="2. Number"></a>2. Number</h3><h3 id="3-undefined"><a href="#3-undefined" class="headerlink" title="3. undefined"></a>3. undefined</h3><p>값을 할당하지 않은 변수는 undefined 값을 가진다. 즉, 선언은 되었지만 할당된 적이 없는 변수에 접근하거나 존재하지 않는 객체 프로퍼티에 접근할 경우 반환된다.</p>
+<p>일반적으로 변수에 undefined 를 지정해서는 안됨.<br>리터럴 값 undefined 는 빈 객체를 가리키는 포인터인 null과 초기화되지 않은 변수(undefined)를 비교할 목적으로 ECMA-262 3판에 추가되었다.</p>
+<h3 id="4-null"><a href="#4-null" class="headerlink" title="4. null"></a>4. null</h3><p>null 타입은 딱 한 가지 값, null을 가질 수 있다.<br>의도적으로 기본형(Primitives) 또는 Object형 변수에 값이 없다는 것을 명시한 것이다. 변수를 정의할 때 해당 변수가 객체를 가리키게 할 생각이라면 해당 변수에는 다른 값을 쓰지 말고 null로 초기화하길 권장한다. 그렇게 하면 다음과 같은 코드를 써서 해당 변수가 객체를 가리키는지 명시적으로 확인할 수 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (car != <span class="literal">null</span>) &#123;</div><div class="line">  <span class="comment">// car를 사용하는 코드</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>undefined 는 null에서 파생했으므로 ECMA-262 에서는 두 값이 다음과 같이 표면적으로는 동일한 것으로 정의한다. null 과 undefined 사이에 있는 == 연산자는 항상 true 를 반환한다. 하지만 두 값이 같다고 나오는 이유는 == 연산자가 피연산자를 비교할 때 암시적으로 타입 변환을 하기 때문이다. 하지만 위에서 언급했듯이 undefined 와 null 은 다르기 때문에 === 연산자는 false 를 반환하다.</p>
+<pre><code class="js"><span class="built_in">console</span>.log (<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">// true</span>
+<span class="built_in">console</span>.log (<span class="literal">null</span> === <span class="literal">undefined</span>); <span class="comment">// false</span>
+</code></pre>
+<h3 id="5-Boolean"><a href="#5-Boolean" class="headerlink" title="5. Boolean"></a>5. Boolean</h3><p>논리적인 요소를 나타내며 true 와 false 두가지 값을 갔는다.<br>true :  true, 비어있지않은 문자열 모두, 0이 아닌 숫자. 무한대 포함, 모든 객체(빈객체{})<br>false : false, null, undefined, 숫자 0</p>
+<h3 id="6-Symbol"><a href="#6-Symbol" class="headerlink" title="6. Symbol"></a>6. Symbol</h3><p>Symbol은 ES6에서 새롭게 추가된 7번째 타입이다. Symbol은 애플리케이션 전체에서 유일하며 변경 불가능한(immutable) 기본 자료형(primitive) 이다. 주로 객체의 프로퍼티 키(property key)로 사용한다. Symbol 값은 애플리케이션 전체에서 유일하기 때문에 Symbol 값을 키로 갖는 프로퍼티는 다른 어떠한 프로퍼티와도 충돌하지 않는다.</p>
+<h2 id="참조-데이터-타입"><a href="#참조-데이터-타입" class="headerlink" title="참조 데이터 타입"></a>참조 데이터 타입</h2><p>…조만간</p>
+<hr>
+<h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul>
+<li><a href="http://poiemaweb.com/js-data-type-variable" target="_blank" rel="external">poiemaweb - JS DataType &amp; Variable</a></li>
+<li>프론트엔드 개발자를 위한 자바스크립트 프로그래밍 <strong>니콜라스 자카스</strong> 지음 | <strong>한선용</strong> 옮김</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-11-15T07:14:51.000Z"><a href="/2017/11/15/React-JSX/">2017-11-15</a></time>
       
       
@@ -217,7 +283,7 @@
   
     <li><a href="/categories/React/">React</a><small>2</small></li>
   
-    <li><a href="/categories/TIL/">TIL</a><small>7</small></li>
+    <li><a href="/categories/TIL/">TIL</a><small>8</small></li>
   
     <li><a href="/categories/TypeScript/">TypeScript</a><small>1</small></li>
   
